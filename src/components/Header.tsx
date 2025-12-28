@@ -37,11 +37,13 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 h-[300px] transition-all duration-300", // Changed py-4 to h-[300px]
+        "fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300", // Removed px-6 md:px-12
         scrolled ? "bg-gray-900 shadow-lg" : "bg-transparent"
       )}
     >
-      <nav className="relative flex items-center justify-center w-full px-20 h-full"> {/* Added h-full to nav */}
+      <nav className="relative flex items-center justify-center w-full px-20"> {/* Added w-full px-20, changed justify-between to justify-center */}
+        {/* Removed Link to "/" framesofsha */}
+
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
           {navLinks.map((link) => (
@@ -59,10 +61,11 @@ const Header = () => {
         <div className="md:hidden absolute right-20">
           <Button
             variant="ghost"
+            size="icon"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-white hover:bg-gray-700 w-16 h-16" // Removed size="icon", added w-16 h-16
+            className="text-white hover:bg-gray-700"
           >
-            {isMobileMenuOpen ? <X size={48} /> : <Menu size={48} />} {/* Increased icon size to 48 */}
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </Button>
         </div>
       </nav>
@@ -76,10 +79,11 @@ const Header = () => {
       >
         <Button
           variant="ghost"
+          size="icon"
           onClick={() => setIsMobileMenuOpen(false)}
-          className="absolute top-6 right-6 text-white hover:bg-gray-700 w-16 h-16" // Removed size="icon", added w-16 h-16
+          className="absolute top-6 right-6 text-white hover:bg-gray-700"
         >
-          <X size={48} /> {/* Increased icon size to 48 */}
+          <X size={24} />
         </Button>
         <div className="flex flex-col space-y-8">
           {navLinks.map((link) => (
