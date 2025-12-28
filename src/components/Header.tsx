@@ -55,6 +55,9 @@ const Header = () => {
           ))}
         </div>
 
+        {/* Spacer for mobile to push button right */}
+        <div className="md:hidden flex-grow"></div>
+
         {/* Mobile Menu Button */}
         <div className="md:hidden">
           <Button
