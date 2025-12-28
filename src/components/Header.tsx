@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import NoiseOverlay from './NoiseOverlay'; // New import
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -34,16 +35,17 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full pt-4 pb-4 flex justify-end px-4"> {/* Changed justify-center to justify-end and added px-4 */}
+    <header className="fixed top-0 left-0 right-0 z-50 w-full pt-4 pb-4 flex justify-end px-4">
       <nav
         className={cn(
-          "relative flex items-center justify-between transition-all duration-300", // Removed mx-auto
+          "relative flex items-center justify-between transition-all duration-300",
           "md:w-auto md:max-w-fit rounded-full px-4 py-2 md:px-6 md:py-2",
           scrolled ? "bg-white/10 backdrop-blur-lg" : "bg-transparent backdrop-blur-none"
         )}
       >
+        {scrolled && <NoiseOverlay />} {/* Conditionally render NoiseOverlay */}
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-8 relative z-10"> {/* Added relative z-10 */}
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -56,7 +58,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden ml-auto">
+        <div className="md:hidden ml-auto relative z-10"> {/* Added relative z-10 */}
           <Button
             variant="ghost"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
