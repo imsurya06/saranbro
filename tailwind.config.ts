@@ -91,7 +91,7 @@ export default {
         },
         ticker: {
           '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-50%)' }, // Changed to -50% for two identical tracks
+          '100%': { transform: 'translateX(-50%)' }, // This remains -50% for two identical sets
         },
       },
       animation: {
