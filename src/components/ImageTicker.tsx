@@ -38,7 +38,7 @@ const ImageTicker = () => {
       {images.map((src, index) => (
         <div
           key={index}
-          className="w-[90vw] h-[60vh] md:w-[400px] md:h-[250px] lg:w-[500px] lg:h-[300px]" // Adjusted sizes for responsiveness
+          className="w-[70vw] h-[40vh] md:w-[400px] md:h-[250px] lg:w-[500px] lg:h-[300px]" // Adjusted default (mobile) sizes
         >
           <img
             src={src}
