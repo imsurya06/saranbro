@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen w-full bg-black text-white flex items-center justify-center overflow-hidden py-20 md:py-0"
+      className="relative h-[50vh] w-full bg-black text-white flex items-center justify-center overflow-hidden py-20 md:py-0"
     >
       {/* Background Robotic Arm Image */}
       <img
