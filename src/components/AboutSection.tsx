@@ -18,8 +18,8 @@ const AboutSection = () => {
           <div className="flex flex-col space-y-8">
             {/* Description */}
             <div>
-              <h3 className="text-2xl md:text-3xl font-semibold mb-2">Description</h3> {/* Adjusted font size */}
-              <p className="text-base md:text-lg text-gray-300 max-w-lg"> {/* Adjusted font size */}
+              <h3 className="text-2xl font-bold mb-2">Description</h3> {/* Adjusted font size and weight */}
+              <p className="text-base text-gray-300 max-w-lg"> {/* Adjusted font size */}
                 A passionate cinematographer with 3+ years of experience, I specialize in translating vision into
                 cinematic storytelling, blending light, composition, and
                 motion to create immersive visuals.
@@ -28,9 +28,9 @@ const AboutSection = () => {
 
             {/* Experience */}
             <div>
-              <h3 className="text-2xl md:text-3xl font-semibold mb-2">Experience</h3> {/* Adjusted font size */}
-              <p className="text-base md:text-lg text-gray-300"> {/* Adjusted font size */}
-                <span className="font-medium">Cameraman & Video Editor | Envision Media works</span>
+              <h3 className="text-2xl font-bold mb-2">Experience</h3> {/* Adjusted font size and weight */}
+              <p className="text-base text-gray-300"> {/* Adjusted font size */}
+                <span className="font-bold">Cameraman & Video Editor | Envision Media works</span>
                 <br />
                 Duration: June 2024 - Present (1.5 years)
               </p>
@@ -38,8 +38,8 @@ const AboutSection = () => {
 
             {/* Tools */}
             <div>
-              <h3 className="text-2xl md:text-3xl font-semibold mb-2">Tools</h3> {/* Adjusted font size */}
-              <p className="text-base md:text-lg text-gray-300"> {/* Adjusted font size */}
+              <h3 className="text-2xl font-bold mb-2">Tools</h3> {/* Adjusted font size and weight */}
+              <p className="text-base text-gray-300"> {/* Adjusted font size */}
                 Adobe Premiere Pro, Davinci Resolve, After Effects
               </p>
             </div>
@@ -48,9 +48,9 @@ const AboutSection = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
               {/* Photography */}
               <div>
-                <p className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-600 mb-4">01</p> {/* Adjusted font size */}
-                <h4 className="text-xl md:text-2xl font-semibold mb-2">Photography</h4> {/* Adjusted font size */}
-                <p className="text-sm md:text-base text-gray-300"> {/* Adjusted font size */}
+                <p className="text-6xl md:text-7xl lg:text-8xl font-bold text-gray-600 mb-4">01</p> {/* Adjusted font size */}
+                <h4 className="text-xl font-bold mb-2">Photography</h4> {/* Adjusted font size and weight */}
+                <p className="text-sm text-gray-300"> {/* Adjusted font size */}
                   Wedding and event photographer capturing moments with creativity
                   and precision. Skilled in lighting,
                   composition, and editing.
@@ -59,9 +59,9 @@ const AboutSection = () => {
 
               {/* Videography */}
               <div>
-                <p className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-600 mb-4">02</p> {/* Adjusted font size */}
-                <h4 className="text-xl md:text-2xl font-semibold mb-2">Videography</h4> {/* Adjusted font size */}
-                <p className="text-sm md:text-base text-gray-300"> {/* Adjusted font size */}
+                <p className="text-6xl md:text-7xl lg:text-8xl font-bold text-gray-600 mb-4">02</p> {/* Adjusted font size */}
+                <h4 className="text-xl font-bold mb-2">Videography</h4> {/* Adjusted font size and weight */}
+                <p className="text-sm text-gray-300"> {/* Adjusted font size */}
                   Creative videographer skilled in visual
                   storytelling, framing, and lighting.
                   Experienced in filming, editing, and
@@ -71,9 +71,9 @@ const AboutSection = () => {
 
               {/* Post Production */}
               <div>
-                <p className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-600 mb-4">03</p> {/* Adjusted font size */}
-                <h4 className="text-xl md:text-2xl font-semibold mb-2">Post Production</h4> {/* Adjusted font size */}
-                <p className="text-sm md:text-base text-gray-300"> {/* Adjusted font size */}
+                <p className="text-6xl md:text-7xl lg:text-8xl font-bold text-gray-600 mb-4">03</p> {/* Adjusted font size */}
+                <h4 className="text-xl font-bold mb-2">Post Production</h4> {/* Adjusted font size and weight */}
+                <p className="text-sm text-gray-300"> {/* Adjusted font size */}
                   Creative videographer skilled in visual
                   storytelling, framing, and lighting.
                   Experienced in filming, editing, and
