@@ -10,22 +10,28 @@ const images = [
 ];
 
 const ImageTicker = () => {
-  // Duplicate images once to create a seamless loop with -50% translation
-  const tickerImages = [...images, ...images]; 
+  // Component to render a single set of images with their internal gaps
+  const ImageSet = () => (
+    <div className="flex gap-x-8 flex-shrink-0"> {/* flex-shrink-0 is crucial here */}
+      {images.map((src, index) => (
+        <div key={index} className="w-64 h-40 md:w-80 md:h-52 lg:w-96 lg:h-64">
+          <img
+            src={src}
+            alt={`Ticker Image ${index + 1}`}
+            className="w-full h-full object-cover rounded-lg shadow-lg"
+          />
+        </div>
+      ))}
+    </div>
+  );
 
   return (
     <section className="w-full overflow-hidden py-8 bg-gray-950">
-      {/* The container for all images, with gap-x applied directly */}
-      <div className="flex animate-ticker gap-x-8">
-        {tickerImages.map((src, index) => (
-          <div key={index} className="flex-shrink-0 w-64 h-40 md:w-80 md:h-52 lg:w-96 lg:h-64">
-            <img
-              src={src}
-              alt={`Ticker Image ${index + 1}`}
-              className="w-full h-full object-cover rounded-lg shadow-lg"
-            />
-          </div>
-        ))}
+      {/* The outer container for the animation. It contains two identical ImageSet components. */}
+      {/* No gap-x on this container, as the gap is handled within each ImageSet. */}
+      <div className="flex animate-ticker">
+        <ImageSet />
+        <ImageSet />
       </div>
     </section>
   );
