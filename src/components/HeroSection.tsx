@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative h-[50vh] w-full bg-black text-white flex items-center justify-center overflow-hidden py-20 md:py-0"
+      className="relative h-[100vh] md:h-[80vh] lg:h-[50vh] w-full bg-black text-white flex items-center justify-center overflow-hidden py-20 md:py-0"
     >
       {/* Background Robotic Arm Image (reverted to original) */}
       <img
@@ -16,7 +16,7 @@ const HeroSection = () => {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] md:w-[1000px] lg:w-[1200px] opacity-30 z-0 pointer-events-none"
       />
 
-      <div className="relative z-10 w-full px-[200px] grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="relative z-10 w-full px-4 sm:px-8 md:px-12 lg:px-[200px] grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* New Center Image (now the camera image) */}
         <img
           src="/camera-hero.png"
