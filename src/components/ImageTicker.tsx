@@ -43,7 +43,7 @@ const ImageTicker = () => {
           <img
             src={src}
             alt={`Ticker Image ${index + 1}`}
-            className="w-full h-full object-cover rounded-lg shadow-lg" // Changed object-contain to object-cover
+            className="w-full h-full object-contain rounded-lg shadow-lg"
           />
         </div>
       ))}
@@ -51,7 +51,7 @@ const ImageTicker = () => {
   );
 
   return (
-    <section className="w-full overflow-hidden py-0 bg-gray-950">
+    <section className="w-full overflow-hidden py-0 bg-gray-950"> {/* Changed py-8 to py-0 */}
       <div
         className="flex animate-ticker"
         style={{ "--image-set-width": `${imageSetWidth}px` } as React.CSSProperties}
