@@ -38,12 +38,12 @@ const Header = () => {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300",
-        scrolled ? "bg-gray-900 shadow-lg" : "bg-transparent"
+        scrolled ? "bg-white/10 backdrop-blur-lg" : "bg-transparent backdrop-blur-none" // Added glass effect here
       )}
     >
-      <nav className="relative flex items-center w-full pl-20 pr-0"> {/* Removed justify-between */}
+      <nav className="relative flex items-center w-full pl-20 pr-0">
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8 mx-auto"> {/* Added mx-auto to center the links */}
+        <div className="hidden md:flex space-x-8 mx-auto">
           {navLinks.map((link) => (
             <Link
               key={link.name}
