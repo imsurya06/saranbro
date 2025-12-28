@@ -91,13 +91,13 @@ export default {
         },
         ticker: {
           '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-33.333%)' }, // This ensures a seamless loop for 3 sets of images
+          '100%': { transform: 'translateX(-50%)' }, // Changed to -50% for two sets of images
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        ticker: "ticker 8s linear infinite", // Further reduced duration to 8s
+        ticker: "ticker 8s linear infinite", 
       },
     },
   },
