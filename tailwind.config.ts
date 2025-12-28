@@ -90,14 +90,15 @@ export default {
           },
         },
         ticker: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-50%)' }, // This remains -50% for two identical sets
+          '0%': { transform: 'translateX(0)' },
+          // Use the dynamically calculated CSS variable for precise translation
+          '100%': { transform: 'translateX(calc(-1 * var(--image-set-width)))' },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        ticker: "ticker 8s linear infinite", 
+        ticker: "ticker 16s linear infinite", // Increased duration for smoother visual
       },
     },
   },
