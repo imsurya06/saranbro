@@ -37,11 +37,11 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300", // Removed px-6 md:px-12
+        "fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300",
         scrolled ? "bg-gray-900 shadow-lg" : "bg-transparent"
       )}
     >
-      <nav className="relative flex items-center justify-center w-full px-20"> {/* Added w-full px-20, changed justify-between to justify-center */}
+      <nav className="relative flex items-center justify-between w-full px-20"> {/* Changed justify-center to justify-between */}
         {/* Removed Link to "/" framesofsha */}
 
         {/* Desktop Navigation */}
@@ -57,15 +57,15 @@ const Header = () => {
           ))}
         </div>
 
-        {/* Mobile Menu Button - positioned absolutely to the right */}
-        <div className="md:hidden absolute right-20">
+        {/* Mobile Menu Button - now flows to the right */}
+        <div className="md:hidden"> {/* Removed absolute right-20 */}
           <Button
             variant="ghost"
-            size="icon"
+            // size="icon" // Removed size="icon"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-white hover:bg-gray-700"
+            className="text-white hover:bg-gray-700 w-12 h-12" // Increased button size
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={32} /> : <Menu size={32} />} {/* Increased icon size */}
           </Button>
         </div>
       </nav>
