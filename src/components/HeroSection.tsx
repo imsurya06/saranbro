@@ -18,7 +18,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 w-full px-[200px] grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6">
+        <div className="flex flex-col items-center text-center space-y-6">
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tight">
             Sharan.
           </h1>
