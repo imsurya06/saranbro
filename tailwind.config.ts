@@ -18,6 +18,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'], // Default body font
+        heading: ['"Playfair Display"', 'serif'], // Placeholder for Rekalgera
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
