@@ -38,7 +38,7 @@ const Header = () => {
       <nav
         className={cn(
           "relative flex items-center justify-between mx-auto transition-all duration-300",
-          "w-[calc(100%-2rem)] md:w-auto md:max-w-fit rounded-full px-4 py-2 md:px-6 md:py-2", // Responsive width, rounded, padding
+          "md:w-auto md:max-w-fit rounded-full px-4 py-2 md:px-6 md:py-2", // Removed w-[calc(100%-2rem)], now w-auto by default on mobile
           scrolled ? "bg-white/10 backdrop-blur-lg" : "bg-transparent backdrop-blur-none" // Glass effect
         )}
       >
@@ -55,11 +55,8 @@ const Header = () => {
           ))}
         </div>
 
-        {/* Spacer for mobile to push button right */}
-        <div className="md:hidden flex-grow"></div>
-
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="md:hidden ml-auto"> {/* Added ml-auto to push button right on mobile */}
           <Button
             variant="ghost"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
