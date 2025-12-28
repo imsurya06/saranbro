@@ -29,21 +29,21 @@ const Header = () => {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    // Removed "About" link
-    { name: "Works", href: "/#work" }, // Changed "Work" to "Works"
+    { name: "Works", href: "/#work" },
     { name: "Contact", href: "/#contact" },
   ];
 
   return (
-    <header
-      className={cn(
-        "fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300",
-        scrolled ? "bg-white/10 backdrop-blur-lg" : "bg-transparent backdrop-blur-none" // Added glass effect here
-      )}
-    >
-      <nav className="relative flex items-center w-full pl-20 pr-0">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full pt-4 pb-4 flex justify-center"> {/* Full width container, adds top/bottom padding, centers content */}
+      <nav
+        className={cn(
+          "relative flex items-center justify-between mx-auto transition-all duration-300",
+          "w-[calc(100%-2rem)] md:w-auto md:max-w-fit rounded-full px-4 py-2 md:px-6 md:py-2", // Responsive width, rounded, padding
+          scrolled ? "bg-white/10 backdrop-blur-lg" : "bg-transparent backdrop-blur-none" // Glass effect
+        )}
+      >
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8 mx-auto">
+        <div className="hidden md:flex space-x-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -55,8 +55,8 @@ const Header = () => {
           ))}
         </div>
 
-        {/* Mobile Menu Button - now flows to the right */}
-        <div className="md:hidden ml-auto">
+        {/* Mobile Menu Button */}
+        <div className="md:hidden">
           <Button
             variant="ghost"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
