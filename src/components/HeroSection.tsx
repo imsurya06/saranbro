@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative h-[100vh] md:h-[80vh] lg:h-[50vh] w-full bg-black text-white flex items-center justify-center overflow-hidden pt-20 pb-0 md:py-0" // Changed py-20 to pt-20 pb-0
+      className="relative h-[100vh] md:h-[80vh] lg:h-[50vh] w-full bg-black text-white flex items-center justify-center overflow-hidden pt-20 pb-0 md:py-0"
     >
       {/* Background Robotic Arm Image */}
       <img
@@ -35,7 +35,7 @@ const HeroSection = () => {
           <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans font-semibold max-w-md">
             I can do: <span className="font-bold">Cinematography, Photography, Post Production.</span>
           </p>
-          <Button className="mt-6 px-6 py-4 sm:px-8 sm:py-6 text-base sm:text-lg md:text-xl bg-white text-black hover:bg-gray-200 rounded-full transition-colors duration-300">
+          <Button className="mt-6 px-6 py-4 sm:px-8 sm:py-6 text-base sm:text-lg md:text-xl bg-white/10 text-white border border-white/20 hover:bg-white/20 rounded-full transition-colors duration-300"> {/* Applied glass effect styles */}
             Get in Touch
           </Button>
         </div>
