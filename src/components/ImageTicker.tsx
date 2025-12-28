@@ -12,9 +12,9 @@ const images = [
 const ImageTicker = () => {
   // Component to render a single set of images with their internal gaps
   const ImageSet = () => (
-    <div className="flex gap-x-8 flex-shrink-0"> {/* flex-shrink-0 is crucial here */}
+    <div className="flex gap-x-4 flex-shrink-0"> {/* Reduced gap-x */}
       {images.map((src, index) => (
-        <div key={index} className="w-64 h-40 md:w-80 md:h-52 lg:w-96 lg:h-64">
+        <div key={index} className="w-[90vw] h-[60vh]"> {/* Increased size */}
           <img
             src={src}
             alt={`Ticker Image ${index + 1}`}
@@ -27,8 +27,6 @@ const ImageTicker = () => {
 
   return (
     <section className="w-full overflow-hidden py-8 bg-gray-950">
-      {/* The outer container for the animation. It contains two identical ImageSet components. */}
-      {/* No gap-x on this container, as the gap is handled within each ImageSet. */}
       <div className="flex animate-ticker">
         <ImageSet />
         <ImageSet />
