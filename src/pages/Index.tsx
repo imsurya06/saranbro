@@ -4,7 +4,8 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ImageTicker from "@/components/ImageTicker";
 import ImageTickerReverse from "@/components/ImageTickerReverse";
-import ViewAllButton from "@/components/ViewAllButton"; // Import the new component
+import ViewAllButton from "@/components/ViewAllButton";
+import AboutSection from "@/components/AboutSection"; // Import the new AboutSection
 import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const Index = () => {
@@ -14,11 +15,8 @@ const Index = () => {
       <HeroSection />
       <ImageTicker />
       <ImageTickerReverse />
-      <ViewAllButton /> {/* Add the new View All button here */}
-      {/* Future sections will go here */}
-      <section id="about" className="min-h-screen flex items-center justify-center bg-gray-800 p-8">
-        <h2 className="text-5xl font-bold">About Section Placeholder</h2>
-      </section>
+      <ViewAllButton />
+      <AboutSection /> {/* Add the new AboutSection here */}
       <section id="work" className="min-h-screen flex items-center justify-center bg-gray-700 p-8">
         <h2 className="text-5xl font-bold">Work Section Placeholder</h2>
       </section>
