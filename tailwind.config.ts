@@ -91,14 +91,18 @@ export default {
         },
         ticker: {
           '0%': { transform: 'translateX(0)' },
-          // Use the dynamically calculated CSS variable for precise translation
           '100%': { transform: 'translateX(calc(-1 * var(--image-set-width)))' },
+        },
+        "ticker-reverse": { // New reverse animation
+          '0%': { transform: 'translateX(calc(-1 * var(--image-set-width)))' },
+          '100%': { transform: 'translateX(0)' },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        ticker: "ticker 30s linear infinite", // Increased duration to 30s
+        ticker: "ticker 30s linear infinite",
+        "ticker-reverse": "ticker-reverse 30s linear infinite", // New reverse animation
       },
     },
   },
