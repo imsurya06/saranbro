@@ -91,7 +91,7 @@ export default {
         },
         ticker: {
           '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-50%)' }, // Changed to -50% for two sets of images
+          '100%': { transform: 'translateX(-33.333%)' }, // Changed to -33.333% for three sets of images
         },
       },
       animation: {
