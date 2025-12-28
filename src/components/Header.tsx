@@ -41,11 +41,9 @@ const Header = () => {
         scrolled ? "bg-gray-900 shadow-lg" : "bg-transparent"
       )}
     >
-      <nav className="relative flex items-center justify-between w-full pl-20 pr-0"> {/* Changed px-20 to pl-20 pr-0 */}
-        {/* Removed Link to "/" framesofsha */}
-
+      <nav className="relative flex items-center w-full pl-20 pr-0"> {/* Removed justify-between */}
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex space-x-8 mx-auto"> {/* Added mx-auto to center the links */}
           {navLinks.map((link) => (
             <Link
               key={link.name}
