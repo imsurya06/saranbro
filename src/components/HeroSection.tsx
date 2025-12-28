@@ -21,7 +21,7 @@ const HeroSection = () => {
         <img
           src="/camera-hero.png"
           alt="Center Camera"
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] md:w-[300px] z-20 pointer-events-none"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] md:w-[600px] opacity-50 z-20 pointer-events-none"
         />
 
         {/* Left Content */}
