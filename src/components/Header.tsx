@@ -41,7 +41,7 @@ const Header = () => {
         scrolled ? "bg-gray-900 shadow-lg" : "bg-transparent"
       )}
     >
-      <nav className="relative flex items-center justify-between w-full px-20">
+      <nav className="relative flex items-center justify-between w-full pl-20 pr-0"> {/* Changed px-20 to pl-20 pr-0 */}
         {/* Removed Link to "/" framesofsha */}
 
         {/* Desktop Navigation */}
@@ -58,7 +58,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu Button - now flows to the right */}
-        <div className="md:hidden ml-auto"> {/* Added ml-auto here */}
+        <div className="md:hidden ml-auto">
           <Button
             variant="ghost"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
