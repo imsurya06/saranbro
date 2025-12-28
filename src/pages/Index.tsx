@@ -1,16 +1,24 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+"use client";
 
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">
-          Start building your amazing project here!
-        </p>
-      </div>
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Header />
+      <HeroSection />
+      {/* Future sections will go here */}
+      <section id="about" className="min-h-screen flex items-center justify-center bg-gray-800 p-8">
+        <h2 className="text-5xl font-bold">About Section Placeholder</h2>
+      </section>
+      <section id="work" className="min-h-screen flex items-center justify-center bg-gray-700 p-8">
+        <h2 className="text-5xl font-bold">Work Section Placeholder</h2>
+      </section>
+      <section id="contact" className="min-h-screen flex items-center justify-center bg-gray-800 p-8">
+        <h2 className="text-5xl font-bold">Contact Section Placeholder</h2>
+      </section>
       <MadeWithDyad />
     </div>
   );
