@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react"; // Import the ArrowRight icon
 
 const HeroSection = () => {
   return (
@@ -35,9 +36,14 @@ const HeroSection = () => {
           <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans font-semibold max-w-md">
             I can do: <span className="font-bold">Cinematography, Photography, Post Production.</span>
           </p>
-          <Button className="mt-6 px-6 py-4 sm:px-8 sm:py-6 text-base sm:text-lg md:text-xl bg-white/10 text-white border border-white/20 hover:bg-white/20 rounded-full transition-colors duration-300"> {/* Applied glass effect styles */}
-            Get in Touch
-          </Button>
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mt-6"> {/* Container for buttons */}
+            <Button className="px-6 py-4 sm:px-8 sm:py-6 text-base sm:text-lg md:text-xl bg-white/10 text-white border border-white/20 hover:bg-white/20 rounded-full transition-colors duration-300">
+              Get in Touch
+            </Button>
+            <Button className="px-6 py-4 sm:px-8 sm:py-6 text-base sm:text-lg md:text-xl bg-white/10 text-white border border-white/20 hover:bg-white/20 rounded-full transition-colors duration-300 group"> {/* Added group for hover effect */}
+              View Works <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" /> {/* Arrow icon */}
+            </Button>
+          </div>
         </div>
 
         {/* Right Content */}
