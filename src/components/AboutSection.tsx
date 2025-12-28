@@ -18,7 +18,7 @@ const AboutSection = () => {
           {/* Top Section: Description, Experience, Tools (left) and Image (right) - horizontal flow on large screens */}
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
             {/* Left Content Column: Description, Experience, Tools */}
-            <div className="flex flex-col space-y-8 lg:w-1/2">
+            <div className="flex flex-col space-y-8 lg:w-1/2 h-full"> {/* Added h-full here */}
               {/* Description */}
               <div>
                 <h3 className="text-2xl font-bold mb-2">Description</h3>
