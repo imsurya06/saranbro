@@ -47,7 +47,7 @@ const AboutSection = () => {
             {/* Numbered Skill Sections */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
               {/* Photography */}
-              <div>
+              <div className="text-center"> {/* Added text-center */}
                 <p className="text-6xl md:text-7xl lg:text-8xl font-bold text-gray-600 mb-4">01</p> {/* Adjusted font size */}
                 <h4 className="text-xl font-bold mb-2">Photography</h4> {/* Adjusted font size and weight */}
                 <p className="text-sm text-gray-300"> {/* Adjusted font size */}
@@ -58,7 +58,7 @@ const AboutSection = () => {
               </div>
 
               {/* Videography */}
-              <div>
+              <div className="text-center"> {/* Added text-center */}
                 <p className="text-6xl md:text-7xl lg:text-8xl font-bold text-gray-600 mb-4">02</p> {/* Adjusted font size */}
                 <h4 className="text-xl font-bold mb-2">Videography</h4> {/* Adjusted font size and weight */}
                 <p className="text-sm text-gray-300"> {/* Adjusted font size */}
@@ -70,7 +70,7 @@ const AboutSection = () => {
               </div>
 
               {/* Post Production */}
-              <div>
+              <div className="text-center"> {/* Added text-center */}
                 <p className="text-6xl md:text-7xl lg:text-8xl font-bold text-gray-600 mb-4">03</p> {/* Adjusted font size */}
                 <h4 className="text-xl font-bold mb-2">Post Production</h4> {/* Adjusted font size and weight */}
                 <p className="text-sm text-gray-300"> {/* Adjusted font size */}
