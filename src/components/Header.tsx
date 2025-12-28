@@ -41,7 +41,7 @@ const Header = () => {
         scrolled ? "bg-gray-900 shadow-lg" : "bg-transparent"
       )}
     >
-      <nav className="relative flex items-center justify-between w-full pl-20 pr-0"> {/* Changed px-20 to pl-20 pr-0 */}
+      <nav className="relative flex items-center justify-between w-full pl-20 pr-0">
         {/* Removed Link to "/" framesofsha */}
 
         {/* Desktop Navigation */}
@@ -62,7 +62,7 @@ const Header = () => {
           <Button
             variant="ghost"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-white hover:bg-gray-700 w-12 h-12"
+            className="text-white hover:bg-gray-700 w-16 h-16" {/* Increased size to w-16 h-16 */}
           >
             {isMobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
           </Button>
