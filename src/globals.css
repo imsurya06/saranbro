@@ -96,6 +96,6 @@
   }
 
   body {
-    @apply bg-background text-foreground font-light;
+    @apply bg-background text-foreground font-light text-sm;
   }
 }
