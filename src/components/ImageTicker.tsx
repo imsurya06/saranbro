@@ -34,9 +34,12 @@ const ImageTicker = () => {
 
   // Component to render a single set of images with their internal gaps
   const ImageSet = ({ setRef }: { setRef?: React.RefObject<HTMLDivElement> }) => (
-    <div ref={setRef} className="flex gap-x-2 flex-shrink-0"> {/* Changed gap-x-6 to gap-x-2 for 8px */}
+    <div ref={setRef} className="flex gap-x-2 flex-shrink-0">
       {images.map((src, index) => (
-        <div key={index} className="w-[90vw] h-[60vh]">
+        <div
+          key={index}
+          className="w-[90vw] h-[60vh] md:w-[400px] md:h-[250px] lg:w-[500px] lg:h-[300px]" // Adjusted sizes for responsiveness
+        >
           <img
             src={src}
             alt={`Ticker Image ${index + 1}`}
