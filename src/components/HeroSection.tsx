@@ -22,10 +22,10 @@ const HeroSection = () => {
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tight">
             Sharan.
           </h1>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-sans max-w-md">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans max-w-md">
             Viscom student with a passion for cinematography and visual storytelling.
           </p>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-sans font-semibold max-w-md">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans font-semibold max-w-md">
             I can do: <span className="font-bold">Cinematography, Photography, Post Production.</span>
           </p>
           <Button className="mt-6 px-6 py-4 sm:px-8 sm:py-6 text-base sm:text-lg md:text-xl bg-white text-black hover:bg-gray-200 rounded-full transition-colors duration-300">
@@ -40,7 +40,7 @@ const HeroSection = () => {
             alt="Sharan playing chess"
             className="w-56 sm:w-64 md:w-72 h-auto rounded-lg shadow-lg"
           />
-          <p className="text-sm sm:text-base md:text-lg font-sans max-w-xs">
+          <p className="text-xs sm:text-sm md:text-base font-sans max-w-xs">
             Creating cinematic imagery with clarity, emotion, and intention.
           </p>
         </div>
