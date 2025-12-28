@@ -37,14 +37,12 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 py-4 px-6 md:px-12 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300", // Removed px-6 md:px-12
         scrolled ? "bg-gray-900 shadow-lg" : "bg-transparent"
       )}
     >
-      <nav className="flex items-center justify-between max-w-7xl mx-auto">
-        <Link to="/" className="text-2xl font-bold text-white tracking-wider">
-          framesofsha
-        </Link>
+      <nav className="relative flex items-center justify-center w-full px-20"> {/* Added w-full px-20, changed justify-between to justify-center */}
+        {/* Removed Link to "/" framesofsha */}
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
@@ -59,8 +57,8 @@ const Header = () => {
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        {/* Mobile Menu Button - positioned absolutely to the right */}
+        <div className="md:hidden absolute right-20">
           <Button
             variant="ghost"
             size="icon"

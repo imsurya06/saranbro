@@ -13,10 +13,10 @@ const HeroSection = () => {
       <img
         src="/robot-arm-camera.png"
         alt="Robotic Arm Camera"
-        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] md:w-[1000px] lg:w-[1200px] opacity-20 z-0 pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] md:w-[1000px] lg:w-[1200px] opacity-30 z-0 pointer-events-none"
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="relative z-10 w-full px-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6">
           <h1 className="text-6xl md:text-7xl font-heading font-bold tracking-tight">
