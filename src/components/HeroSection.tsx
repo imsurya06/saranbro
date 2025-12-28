@@ -9,10 +9,10 @@ const HeroSection = () => {
       id="home"
       className="relative h-[50vh] w-full bg-black text-white flex items-center justify-center overflow-hidden py-20 md:py-0"
     >
-      {/* Background Robotic Arm Image */}
+      {/* Background Camera Image */}
       <img
-        src="/robot-arm-camera.png"
-        alt="Robotic Arm Camera"
+        src="/camera-hero.png"
+        alt="Camera Background"
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] md:w-[1000px] lg:w-[1200px] opacity-30 z-0 pointer-events-none"
       />
 
