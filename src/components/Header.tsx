@@ -41,7 +41,7 @@ const Header = () => {
         scrolled ? "bg-gray-900 shadow-lg" : "bg-transparent"
       )}
     >
-      <nav className="relative flex items-center justify-between w-full px-20"> {/* Changed justify-center to justify-between */}
+      <nav className="relative flex items-center justify-between w-full px-20">
         {/* Removed Link to "/" framesofsha */}
 
         {/* Desktop Navigation */}
@@ -58,14 +58,13 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu Button - now flows to the right */}
-        <div className="md:hidden"> {/* Removed absolute right-20 */}
+        <div className="md:hidden ml-auto"> {/* Added ml-auto here */}
           <Button
             variant="ghost"
-            // size="icon" // Removed size="icon"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="text-white hover:bg-gray-700 w-12 h-12" // Increased button size
+            className="text-white hover:bg-gray-700 w-12 h-12"
           >
-            {isMobileMenuOpen ? <X size={32} /> : <Menu size={32} />} {/* Increased icon size */}
+            {isMobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
           </Button>
         </div>
       </nav>
