@@ -9,18 +9,18 @@ const HeroSection = () => {
       id="home"
       className="relative h-[50vh] w-full bg-black text-white flex items-center justify-center overflow-hidden py-20 md:py-0"
     >
-      {/* Background Camera Image */}
+      {/* Background Robotic Arm Image (reverted to original) */}
       <img
-        src="/camera-hero.png"
-        alt="Camera Background"
+        src="/robot-arm-camera.png"
+        alt="Robotic Arm Background"
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] md:w-[1000px] lg:w-[1200px] opacity-30 z-0 pointer-events-none"
       />
 
       <div className="relative z-10 w-full px-[200px] grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        {/* New Center Image */}
+        {/* New Center Image (now the camera image) */}
         <img
-          src="/robot-arm-center.png"
-          alt="Center Robotic Arm"
+          src="/camera-hero.png"
+          alt="Center Camera"
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] md:w-[300px] z-20 pointer-events-none"
         />
 
