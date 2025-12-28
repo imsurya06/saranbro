@@ -3,7 +3,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ImageTicker from "@/components/ImageTicker";
-import ImageTickerReverse from "@/components/ImageTickerReverse"; // Import the new component
+import ImageTickerReverse from "@/components/ImageTickerReverse";
 import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const Index = () => {
@@ -12,8 +12,8 @@ const Index = () => {
       <Header />
       <HeroSection />
       <ImageTicker />
-      <div className="py-4"></div> {/* Add some vertical spacing between tickers */}
-      <ImageTickerReverse /> {/* Add the new ImageTickerReverse here */}
+      {/* Removed the div with py-4 to eliminate vertical spacing */}
+      <ImageTickerReverse />
       {/* Future sections will go here */}
       <section id="about" className="min-h-screen flex items-center justify-center bg-gray-800 p-8">
         <h2 className="text-5xl font-bold">About Section Placeholder</h2>
