@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative h-[100vh] md:h-[80vh] lg:h-[50vh] w-full bg-black text-white flex items-center justify-center overflow-hidden py-20 md:py-0"
+      className="relative h-[100vh] md:h-[80vh] lg:h-[50vh] w-full bg-black text-white flex items-center justify-center overflow-hidden pt-20 pb-0 md:py-0" // Changed py-20 to pt-20 pb-0
     >
       {/* Background Robotic Arm Image */}
       <img
