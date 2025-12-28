@@ -97,7 +97,7 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        ticker: "ticker 30s linear infinite", // Adjust duration as needed
+        ticker: "ticker 15s linear infinite", // Adjusted duration to 15s for faster speed
       },
     },
   },
