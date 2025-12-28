@@ -38,7 +38,7 @@ const ImageTicker = () => {
       {images.map((src, index) => (
         <div
           key={index}
-          className="w-[70vw] h-[40vh] md:w-[400px] md:h-[250px] lg:w-[500px] lg:h-[300px]" // Adjusted default (mobile) sizes
+          className="w-[70vw] h-[40vh] md:w-[400px] md:h-[250px] lg:w-[500px] lg:h-[300px]"
         >
           <img
             src={src}
@@ -51,7 +51,7 @@ const ImageTicker = () => {
   );
 
   return (
-    <section className="w-full overflow-hidden py-8 bg-gray-950">
+    <section className="w-full overflow-hidden py-0 bg-gray-950"> {/* Changed py-8 to py-0 */}
       <div
         className="flex animate-ticker"
         style={{ "--image-set-width": `${imageSetWidth}px` } as React.CSSProperties}
