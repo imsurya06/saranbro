@@ -34,12 +34,12 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full pt-4 pb-4 flex justify-center"> {/* Full width container, adds top/bottom padding, centers content */}
+    <header className="fixed top-0 left-0 right-0 z-50 w-full pt-4 pb-4 flex justify-end px-4"> {/* Changed justify-center to justify-end and added px-4 */}
       <nav
         className={cn(
-          "relative flex items-center justify-between mx-auto transition-all duration-300",
-          "md:w-auto md:max-w-fit rounded-full px-4 py-2 md:px-6 md:py-2", // Removed w-[calc(100%-2rem)], now w-auto by default on mobile
-          scrolled ? "bg-white/10 backdrop-blur-lg" : "bg-transparent backdrop-blur-none" // Glass effect
+          "relative flex items-center justify-between transition-all duration-300", // Removed mx-auto
+          "md:w-auto md:max-w-fit rounded-full px-4 py-2 md:px-6 md:py-2",
+          scrolled ? "bg-white/10 backdrop-blur-lg" : "bg-transparent backdrop-blur-none"
         )}
       >
         {/* Desktop Navigation */}
@@ -56,7 +56,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden ml-auto"> {/* Added ml-auto to push button right on mobile */}
+        <div className="md:hidden ml-auto">
           <Button
             variant="ghost"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
