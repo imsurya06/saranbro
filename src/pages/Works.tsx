@@ -23,11 +23,9 @@ const photographyImages = [
 ];
 
 const videographyVideos = [
-  { vimeoId: "1149860125", title: "First Videography Project" },
-  { vimeoId: "1149860178", title: "Second Videography Project" },
-  { vimeoId: "1149860280", title: "Third Videography Project" },
+  // Removed Vimeo videos, keeping only Google Drive videos
   { src: "https://drive.google.com/file/d/10TuBPro-0givS0BsN9StoxYpiaU8r_D_/preview", title: "Google Drive Video" },
-  { src: "https://drive.google.com/file/d/1Hx_pW1sotGI5zBTfSBEWaMaHSCL0pLx4/preview", title: "Another Google Drive Video" }, // Added the new Google Drive video
+  { src: "https://drive.google.com/file/d/1Hx_pW1sotGI5zBTfSBEWaMaHSCL0pLx4/preview", title: "Another Google Drive Video" },
 ];
 
 const Works = () => {
