@@ -46,13 +46,13 @@ const Works = () => {
           <TabsList className="grid w-full h-fit grid-cols-2 bg-gray-900/50 text-white rounded-full p-2 mb-8 mx-auto max-w-lg overflow-visible backdrop-blur-lg border border-white/10">
             <TabsTrigger
               value="photography"
-              className="data-[state=active]:bg-white/10 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-full text-base sm:text-lg py-2 data-[state=active]:backdrop-blur-sm data-[state=active]:border data-[state=active]:border-white/20"
+              className="transition-all duration-300 ease-in-out data-[state=active]:bg-white/10 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-full text-base sm:text-lg py-2 data-[state=active]:backdrop-blur-sm data-[state=active]:border data-[state=active]:border-white/20"
             >
               Photography
             </TabsTrigger>
             <TabsTrigger
               value="videography"
-              className="data-[state=active]:bg-white/10 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-full text-base sm:text-lg py-2 flex items-center justify-center data-[state=active]:backdrop-blur-sm data-[state=active]:border data-[state=active]:border-white/20"
+              className="transition-all duration-300 ease-in-out data-[state=active]:bg-white/10 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-full text-base sm:text-lg py-2 flex items-center justify-center data-[state=active]:backdrop-blur-sm data-[state=active]:border data-[state=active]:border-white/20"
             >
               Videography <Link to="/#videography" className="ml-2 text-gray-400 hover:text-white transition-colors"></Link>
             </TabsTrigger>
