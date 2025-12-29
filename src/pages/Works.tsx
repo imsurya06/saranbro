@@ -82,7 +82,10 @@ const Works = () => {
             </div>
           </TabsContent>
 
-          <TabsContent value="videography">
+          <TabsContent
+            value="videography"
+            className="-mx-4 sm:-mx-6 md:-mx-8 lg:-mx-[200px] xl:-mx-[200px]" // Apply negative margins to span full width
+          >
             <VideographySection videos={videographyVideos} showTitle={false} /> {/* Added showTitle={false} */}
           </TabsContent>
         </Tabs>
