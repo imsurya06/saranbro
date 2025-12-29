@@ -54,7 +54,7 @@ const Works = () => {
               value="videography"
               className="data-[state=active]:bg-white/10 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-full text-base sm:text-lg py-2 flex items-center justify-center"
             >
-              Videography <Link to="/#videography" className="ml-2 text-gray-400 hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></Link>
+              Videography <Link to="/#videography" className="ml-2 text-gray-400 hover:text-white transition-colors"></Link> {/* Removed the SVG icon */}
             </TabsTrigger>
           </TabsList>
 
