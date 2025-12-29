@@ -27,6 +27,7 @@ const photographyImages = [
 
 const videographyVideos = [
   { src: "https://drive.google.com/file/d/1pdQiu9TqUWiI2Tu0evlW0TZoTm1Vhnuv/preview", title: "First Google Drive Video" },
+  { src: "https://drive.google.com", title: "Untitled Google Drive Video" }, // Added missing title
   { src: "https://drive.google.com/file/d/1qDRnO5Ibj3VmDUkLnyGLY-rsVr3bpMaV/preview", title: "Second Google Drive Video" },
   { src: "https://drive.google.com/file/d/14hLTsXBGBENiEoAdmfmDsRMWctZ3OTCK/preview", title: "Third Google Drive Video" },
   { src: "https://drive.google.com/file/d/10TuBPro-0givS0BsN9StoxYpiaU8r_D_/preview", title: "Google Drive Video" },
@@ -44,6 +45,7 @@ const videographyVideos = [
 
 const reelsVideos = [
   { src: "https://drive.google.com/file/d/1ftkrt6_p2diz0yfYqNDEpAh6lYGSPXXp/preview", title: "Reel 1" },
+  { src: "https://drive.google.com/file/d/19dmHIeN8aQEE_AR2KXUmDlTBWUwJGi5w/preview", title: "Reel 2" },
 ];
 
 const Works = () => {
