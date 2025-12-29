@@ -23,7 +23,8 @@ const photographyImages = [
 ];
 
 const videographyVideos = [
-  { src: "https://drive.google.com/file/d/1pdQiu9TqUWiI2Tu0evlW0TZoTm1Vhnuv/preview", title: "New Google Drive Video" }, // Added new video here
+  { src: "https://drive.google.com/file/d/1pdQiu9TqUWiI2Tu0evlW0TZoTm1Vhnuv/preview", title: "First Google Drive Video" },
+  { src: "https://drive.google.com/file/d/1qDRnO5Ibj3VmDUkLnyGLY-rsVr3bpMaV/preview", title: "Second Google Drive Video" }, // Added this new video
   { src: "https://drive.google.com/file/d/10TuBPro-0givS0BsN9StoxYpiaU8r_D_/preview", title: "Google Drive Video" },
   { src: "https://drive.google.com/file/d/1Hx_pW1sotGI5zBTfSBEWaMaHSCL0pLx4/preview", title: "Another Google Drive Video" },
 ];
