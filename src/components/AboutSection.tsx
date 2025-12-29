@@ -4,20 +4,20 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="w-full bg-black text-white pt-10 pb-16 md:pb-20 lg:pb-24 flex flex-col justify-center"> {/* Increased bottom padding */}
+    <section id="about" className="w-full bg-black text-white pt-10 pb-16 md:pb-20 lg:pb-24 flex flex-col justify-center">
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[200px] xl:px-[200px]">
         {/* Title */}
         <div className="flex justify-center md:justify-end mb-8 md:mb-10">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold text-center md:text-right"> {/* Reduced text size */}
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold text-center md:text-right">
             About Me
           </h2>
         </div>
         {/* Main content container - vertical flow */}
-        <div className="flex flex-col gap-8 md:gap-12">
+        <div className="flex flex-col gap-8 md:gap-16"> {/* Changed gap-12 to gap-8 for mobile/tablet (32px) */}
           {/* Top Section: Image (top on mobile), Description, Experience, Tools (bottom on mobile) - horizontal flow on large screens */}
-          <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-center md:items-stretch">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center md:items-stretch">
             {/* Left Content Column: Description, Experience, Tools (now first for desktop) */}
-            <div className="flex flex-col space-y-6 md:w-1/2 h-full items-center md:items-start justify-center">
+            <div className="flex flex-col space-y-8 md:w-1/2 h-full items-center md:items-start justify-center"> {/* Changed space-y-6 to space-y-8 (32px) */}
               {/* Description */}
               <div className="text-left w-full">
                 <h3 className="text-2xl font-bold mb-2">Description</h3>
@@ -50,7 +50,7 @@ const AboutSection = () => {
             </div>
           </div>
           {/* Bottom Section: Numbered Skill Sections - horizontal flow on medium screens */}
-          <div className="flex flex-col md:flex-row justify-between gap-6 pt-6">
+          <div className="flex flex-col md:flex-row justify-between gap-8 pt-6">
             {/* Photography */}
             <div className="md:w-1/3 text-center md:text-left">
               <p className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-600 mb-3">01</p>
