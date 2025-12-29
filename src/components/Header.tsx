@@ -102,10 +102,10 @@ const Header = () => {
           <p className="text-gray-300 text-lg mt-12 mb-4">get in touch</p>
           {/* Social Media Icons */}
           <div className="flex space-x-6">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+            <a href="https://www.instagram.com/_sharan_19__/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <Instagram size={32} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+            <a href="https://www.linkedin.com/in/sharan-s-55943b24a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <Linkedin size={32} />
             </a>
             <a href="mailto:blackashsharan@gmail.com" className="text-gray-400 hover:text-white transition-colors"> {/* Updated mailto link */}

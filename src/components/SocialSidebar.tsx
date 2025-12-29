@@ -18,7 +18,7 @@ const SocialSidebar = () => {
       <NoiseOverlay className="rounded-l-full" /> {/* Apply noise overlay to match shape */}
       <div className="relative z-10 flex flex-col items-center space-y-6">
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/_sharan_19__/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-300 hover:text-white transition-colors"
@@ -27,7 +27,7 @@ const SocialSidebar = () => {
           <Instagram size={24} />
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/sharan-s-55943b24a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-300 hover:text-white transition-colors"
