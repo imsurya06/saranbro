@@ -14,15 +14,6 @@ const HeroSection = () => {
       />
       
       <div className="relative z-10 w-full px-4 sm:px-8 md:px-12 lg:px-[200px] grid grid-cols-1 gap-8 items-center">
-        {/* Center Image - visible on all screens now */}
-        <div className="flex justify-center">
-          <img 
-            src="/camera-hero.png" 
-            alt="Center Camera" 
-            className="w-48 h-48 md:w-64 md:h-64 lg:w-[300px] lg:h-[300px] object-contain z-20 pointer-events-none" 
-          />
-        </div>
-        
         {/* Content Container - Stacked vertically on mobile */}
         <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center w-full">
           {/* Left Content - Centered on mobile */}
