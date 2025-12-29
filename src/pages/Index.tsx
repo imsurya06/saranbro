@@ -7,6 +7,7 @@ import ImageTickerReverse from "@/components/ImageTickerReverse";
 import ViewAllButton from "@/components/ViewAllButton";
 import AboutSection from "@/components/AboutSection";
 import VideographySection from "@/components/VideographySection";
+import Footer from "@/components/Footer"; // Import the new Footer component
 import { MadeWithDyad } from "@/components/made-with-dyad";
 
 const Index = () => {
@@ -26,6 +27,7 @@ const Index = () => {
       <AboutSection />
       <VideographySection videos={videographyVideos} />
       <ViewAllButton /> {/* Added this View All button for the videography section */}
+      <Footer /> {/* Add the Footer component here */}
       <MadeWithDyad />
     </div>
   );
