@@ -7,7 +7,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import VideographySection from "@/components/VideographySection";
-import { MadeWithDyad } from "@/components/made-with-dyad";
+import { MadeWithDyad } from "@/components/made-with-dyad"; // Corrected ' = ' to ' from '
 
 const photographyImages = [
   "/DSC00975.JPG",
@@ -43,7 +43,7 @@ const Works = () => {
         </h1>
 
         <Tabs defaultValue={initialTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-2 bg-gray-800 text-white rounded-full p-1 mb-8 mx-auto max-w-lg"> {/* Changed mb-12 to mb-8 for 32px gap */}
+          <TabsList className="grid w-full grid-cols-2 bg-gray-800 text-white rounded-full p-1 mb-8 mx-auto max-w-lg overflow-visible">
             <TabsTrigger
               value="photography"
               className="data-[state=active]:bg-white/10 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-full text-base sm:text-lg py-2"
@@ -54,7 +54,7 @@ const Works = () => {
               value="videography"
               className="data-[state=active]:bg-white/10 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-full text-base sm:text-lg py-2 flex items-center justify-center"
             >
-              Videography <Link to="/#videography" className="ml-2 text-gray-400 hover:text-white transition-colors"></Link> {/* Removed the SVG icon */}
+              Videography <Link to="/#videography" className="ml-2 text-gray-400 hover:text-white transition-colors"></Link>
             </TabsTrigger>
           </TabsList>
 
