@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Works from "./pages/Works"; // Import the new Works page
 import NotFound from "./pages/NotFound";
+import SocialSidebar from "./components/SocialSidebar"; // Import the new SocialSidebar
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <SocialSidebar /> {/* Add the SocialSidebar here */}
     </TooltipProvider>
   </QueryClientProvider>
 );
