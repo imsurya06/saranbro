@@ -99,3 +99,20 @@
     @apply bg-background text-foreground font-light text-sm;
   }
 }
+
+@keyframes liquid-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.liquid-glass-text {
+  background: linear-gradient(90deg, rgba(255,255,255,0.7) 0%, rgba(173,216,230,0.7) 25%, rgba(255,255,255,0.7) 50%, rgba(173,216,230,0.7) 75%, rgba(255,255,255,0.7) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  animation: liquid-gradient 5s ease infinite alternate;
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.3);
+}

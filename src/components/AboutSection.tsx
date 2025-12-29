@@ -8,7 +8,7 @@ const AboutSection = () => {
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[200px] xl:px-[200px]">
         {/* Title */}
         <div className="flex justify-center md:justify-end mb-8 md:mb-10">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold text-center md:text-right">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold text-center md:text-right liquid-glass-text">
             About Me
           </h2>
         </div>
