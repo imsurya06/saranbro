@@ -28,7 +28,7 @@ const VideographySection = ({ videos, showTitle = true }: VideographySectionProp
           <div key={index} className="relative w-full" style={{ paddingBottom: "56.25%" /* 16:9 Aspect Ratio */ }}>
             {video.vimeoId ? (
               <iframe
-                src={`https://player.vimeo.com/video/${video.vimeoId}?background=1`}
+                src={`https://player.vimeo.com/video/${video.vimeoId}`}
                 frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
