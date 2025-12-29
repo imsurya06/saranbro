@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Instagram, Linkedin, Mail, ChevronRight } from "lucide-react"; // Added social icons and ChevronRight
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import NoiseOverlay from './NoiseOverlay'; // New import
+import NoiseOverlay from './NoiseOverlay';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -31,7 +31,7 @@ const Header = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Works", href: "/#work" },
-    { name: "Contact", href: "/#contact" },
+    { name: "Contact", href: "/#contact", icon: <ChevronRight size={24} /> }, // Added icon for Contact
   ];
 
   return (
@@ -43,22 +43,23 @@ const Header = () => {
           scrolled ? "bg-white/10 backdrop-blur-lg" : "bg-transparent backdrop-blur-none"
         )}
       >
-        {scrolled && <NoiseOverlay />} {/* Conditionally render NoiseOverlay */}
+        {scrolled && <NoiseOverlay />}
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8 relative z-10"> {/* Added relative z-10 */}
+        <div className="hidden md:flex space-x-8 relative z-10">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.href}
-              className="text-white text-lg hover:text-gray-300 transition-colors duration-300"
+              className="text-white text-lg hover:text-gray-300 transition-colors duration-300 flex items-center" // Added flex items-center
             >
               {link.name}
+              {link.icon && <span className="ml-1">{link.icon}</span>} {/* Render icon if present */}
             </Link>
           ))}
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden ml-auto relative z-10"> {/* Added relative z-10 */}
+        <div className="md:hidden ml-auto relative z-10">
           <Button
             variant="ghost"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -84,17 +85,30 @@ const Header = () => {
         >
           <X size={24} />
         </Button>
-        <div className="flex flex-col space-y-8">
+        <div className="flex flex-col space-y-8 items-center"> {/* Added items-center for centering */}
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-white text-3xl font-semibold hover:text-gray-300 transition-colors duration-300"
+              className="text-white text-3xl font-semibold hover:text-gray-300 transition-colors duration-300 flex items-center" // Added flex items-center
             >
               {link.name}
+              {link.icon && <span className="ml-2">{link.icon}</span>} {/* Render icon if present */}
             </Link>
           ))}
+          {/* Social Media Icons */}
+          <div className="flex space-x-6 mt-12"> {/* Added mt-12 for spacing from links */}
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              <Instagram size={32} />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              <Linkedin size={32} />
+            </a>
+            <a href="mailto:your-email@example.com" className="text-gray-400 hover:text-white transition-colors">
+              <Mail size={32} />
+            </a>
+          </div>
         </div>
       </div>
     </header>
