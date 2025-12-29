@@ -30,7 +30,7 @@ const Header = () => {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Works", href: "/#work" },
+    { name: "Works", href: "/works" }, // Updated href to /works
     { name: "Contact", href: "/#contact", icon: <ChevronRight size={24} /> }, // Added icon for Contact
   ];
 

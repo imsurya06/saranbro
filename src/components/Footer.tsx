@@ -25,7 +25,7 @@ const Footer = () => {
           <Link to="/" className="text-gray-300 hover:text-white transition-colors text-base md:text-lg">
             Home
           </Link>
-          <Link to="/#work" className="text-gray-300 hover:text-white transition-colors text-base md:text-lg">
+          <Link to="/works" className="text-gray-300 hover:text-white transition-colors text-base md:text-lg"> {/* Updated href to /works */}
             Works
           </Link>
           <Link to="/#contact" className="text-gray-300 hover:text-white transition-colors text-base md:text-lg flex items-center">

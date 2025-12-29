@@ -23,10 +23,10 @@ const Index = () => {
       <HeroSection />
       <ImageTicker />
       <ImageTickerReverse />
-      <ViewAllButton /> {/* This one is for the image tickers */}
+      {/* Removed the ViewAllButton for image tickers */}
       <AboutSection />
       <VideographySection videos={videographyVideos} />
-      <ViewAllButton /> {/* Added this View All button for the videography section */}
+      <ViewAllButton href="/works?tab=videography" /> {/* Updated this View All button to link to the videography tab on the Works page */}
       <Footer /> {/* Add the Footer component here */}
       <MadeWithDyad />
     </div>
