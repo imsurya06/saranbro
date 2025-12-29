@@ -9,10 +9,12 @@ const Footer = () => {
     <footer id="contact" className="w-full bg-black text-white pt-20 pb-8 md:pt-24 lg:pt-32 px-4 sm:px-6 md:px-8 lg:px-[200px] xl:px-[200px]">
       {/* Contact Title */}
       <div className="flex flex-col items-center mb-8 md:mb-12">
-        <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-heading font-bold text-center liquid-glass-text pb-4 relative">
-          Contact
-          <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-0.5 bg-white/50"></span> {/* Underline effect */}
-        </h2>
+        <a href="mailto:blackashsharan@gmail.com" className="block text-white no-underline">
+          <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-heading font-bold text-center liquid-glass-text pb-4 relative">
+            Contact
+            <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-0.5 bg-white/50"></span> {/* Underline effect */}
+          </h2>
+        </a>
         <p className="text-base md:text-lg text-gray-400 mt-4">
           I will get back to you within 24 hours
         </p>
