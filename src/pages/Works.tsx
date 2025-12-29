@@ -159,24 +159,26 @@ const Works = () => {
           </TabsList>
 
           <TabsContent value="photography">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4"> {/* Changed grid to columns */}
               {photographyImages.map((src, index) => (
-                <Dialog key={index}>
-                  <DialogTrigger asChild>
-                    <img
-                      src={src}
-                      alt={`Photography ${index + 1}`}
-                      className="w-full h-auto object-cover rounded-lg shadow-lg cursor-pointer transform transition-transform duration-300 hover:scale-105"
-                    />
-                  </DialogTrigger>
-                  <DialogContent className="max-w-4xl max-h-[90vh] p-0 border-0 bg-transparent shadow-none">
-                    <img
-                      src={src}
-                      alt="Preview"
-                      className="w-full h-full object-contain max-h-[80vh]"
-                    />
-                  </DialogContent>
-                </Dialog>
+                <div key={index} className="break-inside-avoid-column mb-4"> {/* New wrapper div */}
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <img
+                        src={src}
+                        alt={`Photography ${index + 1}`}
+                        className="w-full h-auto object-cover rounded-lg shadow-lg cursor-pointer transform transition-transform duration-300 hover:scale-105"
+                      />
+                    </DialogTrigger>
+                    <DialogContent className="max-w-4xl max-h-[90vh] p-0 border-0 bg-transparent shadow-none">
+                      <img
+                        src={src}
+                        alt="Preview"
+                        className="w-full h-full object-contain max-h-[80vh]"
+                      />
+                    </DialogContent>
+                  </Dialog>
+                </div>
               ))}
             </div>
           </TabsContent>
