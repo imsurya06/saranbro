@@ -42,7 +42,7 @@ const ImageTicker = () => {
           <img
             src={src}
             alt={`Ticker Image ${index + 1}`}
-            className="w-full h-full object-contain rounded-lg shadow-lg md:rounded-lg md:shadow-lg"
+            className="w-full h-full object-cover rounded-lg shadow-lg md:rounded-lg md:shadow-lg"
           />
         </div>
       ))}
