@@ -43,16 +43,16 @@ const Works = () => {
         </h1>
 
         <Tabs defaultValue={initialTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-2 bg-gray-800 text-white rounded-full p-2 mb-8 mx-auto max-w-lg overflow-visible"> {/* Changed p-1 to p-2 */}
+          <TabsList className="grid w-full grid-cols-2 text-white rounded-full p-2 mb-8 mx-auto max-w-lg overflow-visible"> {/* Removed bg-gray-800 */}
             <TabsTrigger
               value="photography"
-              className="data-[state=active]:bg-white/10 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-full text-base sm:text-lg py-2"
+              className="data-[state=active]:text-white data-[state=active]:underline data-[state=active]:underline-offset-4 rounded-full text-base sm:text-lg py-2" // Removed bg and shadow, added underline
             >
               Photography
             </TabsTrigger>
             <TabsTrigger
               value="videography"
-              className="data-[state=active]:bg-white/10 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-full text-base sm:text-lg py-2 flex items-center justify-center"
+              className="data-[state=active]:text-white data-[state=active]:underline data-[state=active]:underline-offset-4 rounded-full text-base sm:text-lg py-2 flex items-center justify-center" // Removed bg and shadow, added underline
             >
               Videography <Link to="/#videography" className="ml-2 text-gray-400 hover:text-white transition-colors"></Link>
             </TabsTrigger>
