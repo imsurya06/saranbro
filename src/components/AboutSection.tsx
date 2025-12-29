@@ -52,7 +52,7 @@ const AboutSection = () => {
           {/* Bottom Section: Numbered Skill Sections - horizontal flow on medium screens */}
           <div className="flex flex-col md:flex-row justify-between gap-8 pt-6">
             {/* Photography */}
-            <div className="md:w-1/3 text-center md:text-left">
+            <div className="md:w-1/3 text-center md:text-left bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <p className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-600 mb-3">01</p>
               <h4 className="text-xl font-bold mb-2">Photography</h4>
               <p className="text-base md:text-lg text-gray-300">
@@ -60,7 +60,7 @@ const AboutSection = () => {
               </p>
             </div>
             {/* Videography */}
-            <div className="md:w-1/3 text-center md:text-left">
+            <div className="md:w-1/3 text-center md:text-left bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <p className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-600 mb-3">02</p>
               <h4 className="text-xl font-bold mb-2">Videography</h4>
               <p className="text-base md:text-lg text-gray-300">
@@ -68,7 +68,7 @@ const AboutSection = () => {
               </p>
             </div>
             {/* Post Production */}
-            <div className="md:w-1/3 text-center md:text-left">
+            <div className="md:w-1/3 text-center md:text-left bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
               <p className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-600 mb-3">03</p>
               <h4 className="text-xl font-bold mb-2">Post Production</h4>
               <p className="text-base md:text-lg text-gray-300">
