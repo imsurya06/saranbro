@@ -15,7 +15,7 @@ const VideographySection = ({ videos }: { videos: VideoProps[] }) => {
           Videography
         </h2>
       </div>
-      <div className="w-full flex flex-col gap-0"> {/* Changed gap-8 to gap-0 */}
+      <div className="w-full flex flex-col gap-8"> {/* Changed gap-0 back to gap-8 */}
         {videos.map((video, index) => (
           <div key={index} className="relative w-full" style={{ paddingBottom: "56.25%" /* 16:9 Aspect Ratio */ }}>
             <iframe
