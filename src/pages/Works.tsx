@@ -23,11 +23,11 @@ const photographyImages = [
   "/0C8A3100.JPG",
   "/148A9514.JPG",
   "/DSC00890.JPG",
-  "/_JPM8546.JPG", // Added new image
-  "/0C8A3294.JPG", // Added new image
-  "/0C8A3317.JPG", // Added new image
-  "/0C8A3331.JPG", // Added new image
-  "/0C8A3448.JPG", // Added new image
+  "/_JPM8546.JPG",
+  // Removed: "/0C8A3294.JPG",
+  // Removed: "/0C8A3317.JPG",
+  // Removed: "/0C8A3331.JPG",
+  // Removed: "/0C8A3448.JPG",
   // Add more photography image paths here
 ];
 
