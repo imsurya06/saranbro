@@ -29,7 +29,8 @@ const videographyVideos = [
   { src: "https://drive.google.com/file/d/10TuBPro-0givS0BsN9StoxYpiaU8r_D_/preview", title: "Google Drive Video" },
   { src: "https://drive.google.com/file/d/1Hx_pW1sotGI5zBTfSBEWaMaHSCL0pLx4/preview", title: "Another Google Drive Video" },
   { src: "https://drive.google.com/file/d/1IMPrl3htZwgTtD_AFc8LhfLLgjsP9qFB/preview", title: "Last Google Drive Video" },
-  { src: "https://drive.google.com/file/d/11ggxZfbhuAN6A3P_B7dKl4ZIX4mjdqwY/preview", title: "Next Google Drive Video" }, // Added this new video at the end
+  { src: "https://drive.google.com/file/d/11ggxZfbhuAN6A3P_B7dKl4ZIX4mjdqwY/preview", title: "Next Google Drive Video" },
+  { src: "https://drive.google.com/file/d/1JtP4ShVqfNibeeluhQHM4Xj3KGr2vl20/preview", title: "New Google Drive Video" }, // Added this new video at the end
 ];
 
 const Works = () => {
