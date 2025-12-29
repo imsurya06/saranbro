@@ -106,7 +106,10 @@ const Works = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="bg-gray-900 border border-white/20 text-white rounded-lg p-1">
                   <DropdownMenuItem
-                    onClick={() => setSelectedVideographySubTab("videos")}
+                    onClick={() => {
+                      setActiveTab("videography"); // Ensure main tab is active
+                      setSelectedVideographySubTab("videos");
+                    }}
                     className={cn(
                       "flex items-center space-x-2 px-3 py-2 rounded-md cursor-pointer hover:bg-white/10",
                       selectedVideographySubTab === "videos" && "bg-white/10"
@@ -116,7 +119,10 @@ const Works = () => {
                     <span>Videos</span>
                   </DropdownMenuItem>
                   <DropdownMenuItem
-                    onClick={() => setSelectedVideographySubTab("reels")}
+                    onClick={() => {
+                      setActiveTab("videography"); // Ensure main tab is active
+                      setSelectedVideographySubTab("reels");
+                    }}
                     className={cn(
                       "flex items-center space-x-2 px-3 py-2 rounded-md cursor-pointer hover:bg-white/10",
                       selectedVideographySubTab === "reels" && "bg-white/10"
