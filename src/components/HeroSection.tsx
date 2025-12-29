@@ -21,11 +21,11 @@ const HeroSection = () => {
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tight w-full text-left">
               Sharan,
             </h1>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans w-full text-left">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans w-full text-left max-w-xs">
               Viscom student with a passion for cinematography and visual storytelling.
             </p>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans font-semibold text-center md:text-left">
-              I can do: <span className="font-bold">Cinematography, Photography, Post Production.</span>
+              I can do: <span className="font-bold inline-block max-w-[200px]">Cinematography, Photography, Post Production.</span>
             </p>
             {/* Changed Button to an <a> tag with mailto link */}
             <a 
