@@ -1,13 +1,16 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { ImageIcon, VideoIcon, Film, ChevronDown } from "lucide-react"; // Added icons
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import VideographySection from "@/components/VideographySection";
 import { MadeWithDyad } from "@/components/made-with-dyad";
+import { cn } from "@/lib/utils"; // Import cn for conditional classNames
 
 const photographyImages = [
   "/DSC00975.JPG",
@@ -18,7 +21,6 @@ const photographyImages = [
   "/SHAL4208.JPG",
   "/0C8A3100.JPG",
   "/148A9514.JPG",
-  // Removed "/urban-solitude-1.png"
   // Add more photography image paths here
 ];
 
@@ -36,13 +38,37 @@ const videographyVideos = [
   { src: "https://drive.google.com/file/d/1HnlEr7r6MKXCh1nVck-k0PLdirGO6uJs/preview", title: "Yet Another Google Drive Video" },
   { src: "https://drive.google.com/file/d/1gwZKr4g2hvZtzJGINn6e0vemjZW_NkCN/preview", title: "Newest Google Drive Video" },
   { src: "https://drive.google.com/file/d/1aAEm6tb2uQrXV1P4OYtkMShWNqaN47T0/preview", title: "Another Latest Google Drive Video" },
-  { src: "https://drive.google.com/file/d/1mbyk8blTx9UXIbssSd5Fd8cnapVzKANB/preview", title: "New Google Drive Video" }, // Added this new video at the end
+  { src: "https://drive.google.com/file/d/1mbyk8blTx9UXIbssSd5Fd8cnapVzKANB/preview", title: "New Google Drive Video" },
 ];
 
 const Works = () => {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
-  const initialTab = queryParams.get("tab") === "videography" ? "videography" : "photography";
+
+  const [activeTab, setActiveTab] = useState<"photography" | "videography">(
+    queryParams.get("tab") === "videography" ? "videography" : "photography"
+  );
+  const [selectedVideographySubTab, setSelectedVideographySubTab] = useState<"videos" | "reels">(
+    queryParams.get("tab") === "videography" && queryParams.get("subtab") === "reels"
+      ? "reels"
+      : "videos"
+  );
+
+  useEffect(() => {
+    const tab = queryParams.get("tab");
+    const subtab = queryParams.get("subtab");
+
+    if (tab === "videography") {
+      setActiveTab("videography");
+      if (subtab === "reels") {
+        setSelectedVideographySubTab("reels");
+      } else {
+        setSelectedVideographySubTab("videos");
+      }
+    } else {
+      setActiveTab("photography");
+    }
+  }, [location.search]);
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -52,19 +78,55 @@ const Works = () => {
           My Works
         </h1>
 
-        <Tabs defaultValue={initialTab} className="w-full">
+        <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as "photography" | "videography")} className="w-full">
           <TabsList className="grid w-full h-fit grid-cols-2 bg-gray-900/50 text-white rounded-full p-2 mb-8 mx-auto max-w-lg overflow-visible backdrop-blur-lg border border-white/10">
             <TabsTrigger
               value="photography"
-              className="transition-all duration-300 ease-in-out data-[state=active]:bg-white/10 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-full text-base sm:text-lg py-2 data-[state=active]:backdrop-blur-sm data-[state=active]:border data-[state=active]:border-white/20"
+              className="transition-all duration-300 ease-in-out data-[state=active]:bg-white/10 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-full text-base sm:text-lg py-2 data-[state=active]:backdrop-blur-sm data-[state=active]:border data-[state=active]:border-white/20 flex items-center justify-center space-x-2"
             >
-              Photography
+              <ImageIcon className="h-5 w-5" />
+              <span>Photography</span>
             </TabsTrigger>
+
             <TabsTrigger
               value="videography"
-              className="transition-all duration-300 ease-in-out data-[state=active]:bg-white/10 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-full text-base sm:text-lg py-2 flex items-center justify-center data-[state=active]:backdrop-blur-sm data-[state=active]:border data-[state=active]:border-white/20"
+              className={cn(
+                "transition-all duration-300 ease-in-out rounded-full text-base sm:text-lg py-2 flex items-center justify-center space-x-2",
+                activeTab === "videography"
+                  ? "bg-white/10 text-white shadow-sm backdrop-blur-sm border border-white/20"
+                  : "text-white/70 hover:text-white"
+              )}
+              asChild // Use asChild to pass props to the DropdownMenuTrigger
             >
-              Videography <Link to="/#videography" className="ml-2 text-gray-400 hover:text-white transition-colors"></Link>
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center justify-center space-x-2 w-full h-full focus-visible:outline-none">
+                  <Film className="h-5 w-5" />
+                  <span>Videography</span>
+                  <ChevronDown className="h-4 w-4 opacity-50" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-gray-900 border border-white/20 text-white rounded-lg p-1">
+                  <DropdownMenuItem
+                    onClick={() => setSelectedVideographySubTab("videos")}
+                    className={cn(
+                      "flex items-center space-x-2 px-3 py-2 rounded-md cursor-pointer hover:bg-white/10",
+                      selectedVideographySubTab === "videos" && "bg-white/10"
+                    )}
+                  >
+                    <VideoIcon className="h-4 w-4" />
+                    <span>Videos</span>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem
+                    onClick={() => setSelectedVideographySubTab("reels")}
+                    className={cn(
+                      "flex items-center space-x-2 px-3 py-2 rounded-md cursor-pointer hover:bg-white/10",
+                      selectedVideographySubTab === "reels" && "bg-white/10"
+                    )}
+                  >
+                    <Film className="h-4 w-4" />
+                    <span>Reels</span>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </TabsTrigger>
           </TabsList>
 
@@ -95,7 +157,14 @@ const Works = () => {
             value="videography"
             className="-mx-4 sm:-mx-6 md:-mx-8 lg:-mx-[200px] xl:-mx-[200px]" // Apply negative margins to span full width
           >
-            <VideographySection videos={videographyVideos} showTitle={false} /> {/* Added showTitle={false} */}
+            {selectedVideographySubTab === "videos" ? (
+              <VideographySection videos={videographyVideos} showTitle={false} />
+            ) : (
+              <div className="flex flex-col items-center justify-center h-64 text-gray-400">
+                <Film className="h-16 w-16 mb-4" />
+                <p className="text-xl">Reels content coming soon!</p>
+              </div>
+            )}
           </TabsContent>
         </Tabs>
       </main>
