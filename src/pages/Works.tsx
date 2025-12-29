@@ -18,7 +18,6 @@ const photographyImages = [
   "/SHAL4208.JPG",
   "/0C8A3100.JPG",
   "/148A9514.JPG",
-  "/055A8314 (1).jpg",
   "/urban-solitude-1.png",
   // Add more photography image paths here
 ];
