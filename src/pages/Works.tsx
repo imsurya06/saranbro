@@ -52,7 +52,6 @@ const reelsVideos = [
   { src: "https://drive.google.com/file/d/1azR9kBtbCfj5ec9LpMzab0kH9_TQMFqO/preview", title: "Reel 6" },
   { src: "https://drive.google.com/file/d/1Jq9bh-swknJ14aAZvMEBOa-_g3v76jBY/preview", title: "Reel 7" },
   { src: "https://drive.google.com/file/d/16xF4GJLmQRbqHnLfWiMhngbwXQEOoyTE/preview", title: "Reel 8" },
-  { src: "https://drive.google.com/file/d/10KCVvQbXrDuqiiXR7dDc6PJgnzFtDbDi/view?preview", title: "Reel 9" },
 ];
 
 const Works = () => {
