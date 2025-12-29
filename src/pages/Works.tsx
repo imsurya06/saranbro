@@ -27,13 +27,12 @@ const photographyImages = [
 
 const videographyVideos = [
   { src: "https://drive.google.com/file/d/1pdQiu9TqUWiI2Tu0evlW0TZoTm1Vhnuv/preview", title: "First Google Drive Video" },
-  // Removed the second video from here
   { src: "https://drive.google.com/file/d/1qDRnO5Ibj3VmDUkLnyGLY-rsVr3bpMaV/preview", title: "Second Google Drive Video" },
   { src: "https://drive.google.com/file/d/14hLTsXBGBENiEoAdmfmDsRMWctZ3OTCK/preview", title: "Third Google Drive Video" },
   { src: "https://drive.google.com/file/d/10TuBPro-0givS0BsN9StoxYpiaU8r_D_/preview", title: "Google Drive Video" },
   { src: "https://drive.google.com/file/d/1Hx_pW1sotGI5zBTfSBEWaMaHSCL0pLx4/preview", title: "Another Google Drive Video" },
   { src: "https://drive.google.com/file/d/1IMPrl3htZwgTtD_AFc8LhfLLgjsP9qFB/preview", title: "Last Google Drive Video" },
-  { src: "https://drive.google.com/file/d/11ggxZfbhuAN6A3P_B7dKl4ZIX4m4dqwY/preview", title: "Next Google Drive Video" },
+  // Removed the 7th video from here
   { src: "https://drive.google.com/file/d/1JtP4ShVqfNibeeluhQHM4Xj3KGr2vl20/preview", title: "New Google Drive Video" },
   { src: "https://drive.google.com/file/d/1DznzpDRkhNNFTlVqYpwPyYL3geiflrGi/preview", title: "Latest Google Drive Video" },
   { src: "https://drive.google.com/file/d/1ssQxSYnjt_r6SXnpQSO7TZB9-n3sV8Q8/preview", title: "Another New Google Drive Video" },
