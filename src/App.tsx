@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Works from "./pages/Works"; // Import the new Works page
 import NotFound from "./pages/NotFound";
 import SocialSidebar from "./components/SocialSidebar"; // Import the new SocialSidebar
+import ScrollToTop from "./components/ScrollToTop"; // Import the new ScrollToTop component
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop /> {/* Add ScrollToTop here */}
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/works" element={<Works />} /> {/* Add the new Works route */}
