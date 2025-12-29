@@ -11,9 +11,32 @@ interface VideoProps {
 interface VideographySectionProps {
   videos: VideoProps[];
   showTitle?: boolean; // New prop to control title visibility
+  autoplayAndMute?: boolean; // New prop for autoplay and mute
 }
 
-const VideographySection = ({ videos, showTitle = true }: VideographySectionProps) => {
+const VideographySection = ({ videos, showTitle = true, autoplayAndMute = false }: VideographySectionProps) => {
+  const getIframeSrc = (video: VideoProps) => {
+    let baseUrl = "";
+    let params = "";
+
+    if (video.vimeoId) {
+      baseUrl = `https://player.vimeo.com/video/${video.vimeoId}`;
+      if (autoplayAndMute) {
+        params = "autoplay=1&controls=0&loop=1&autopause=0&muted=1";
+      }
+    } else if (video.src) {
+      baseUrl = video.src;
+      if (autoplayAndMute) {
+        params = "autoplay=1&controls=0&loop=1&mute=1";
+      }
+    }
+
+    if (params) {
+      return `${baseUrl}${baseUrl.includes("?") ? "&" : "?"}${params}`;
+    }
+    return baseUrl;
+  };
+
   return (
     <section id="videography" className="w-full bg-black text-white py-16 md:py-20 lg:py-24 flex flex-col items-center">
       {showTitle && ( // Conditionally render the title
@@ -26,25 +49,15 @@ const VideographySection = ({ videos, showTitle = true }: VideographySectionProp
       <div className="w-full flex flex-col gap-8">
         {videos.map((video, index) => (
           <div key={index} className="relative w-full" style={{ paddingBottom: "56.25%" /* 16:9 Aspect Ratio */ }}>
-            {video.vimeoId ? (
+            {video.vimeoId || video.src ? (
               <iframe
-                src={`https://player.vimeo.com/video/${video.vimeoId}`}
+                src={getIframeSrc(video)}
                 frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture"
                 allowFullScreen
                 className="absolute top-0 left-0 w-full h-full"
                 title={video.title}
-              ></iframe>
-            ) : video.src ? (
-              <iframe
-                src={video.src}
-                width="100%"
-                height="100%"
-                frameBorder="0"
-                allow="autoplay"
-                allowFullScreen
-                className="absolute top-0 left-0 w-full h-full"
-                title={video.title}
+                {...(autoplayAndMute && { playsInline: true })} // Add playsInline conditionally
               ></iframe>
             ) : null}
           </div>
