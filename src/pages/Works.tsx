@@ -38,21 +38,21 @@ const Works = () => {
     <div className="min-h-screen bg-black text-white">
       <Header />
       <main className="pt-24 pb-16 px-4 sm:px-6 md:px-8 lg:px-[200px] xl:px-[200px]">
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading font-bold text-center liquid-glass-text mb-12">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold text-center liquid-glass-text mb-12">
           My Works
         </h1>
 
         <Tabs defaultValue={initialTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-2 bg-gray-800 text-white rounded-full p-1 mb-8 mx-auto"> {/* Removed max-w-md */}
+          <TabsList className="grid w-full grid-cols-2 bg-gray-800 text-white rounded-full p-1 mb-8 mx-auto">
             <TabsTrigger
               value="photography"
-              className="data-[state=active]:bg-white/10 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-full text-lg py-2"
+              className="data-[state=active]:bg-white/10 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-full text-base sm:text-lg py-2"
             >
               Photography
             </TabsTrigger>
             <TabsTrigger
               value="videography"
-              className="data-[state=active]:bg-white/10 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-full text-lg py-2 flex items-center justify-center"
+              className="data-[state=active]:bg-white/10 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-full text-base sm:text-lg py-2 flex items-center justify-center"
             >
               Videography <Link to="/#videography" className="ml-2 text-gray-400 hover:text-white transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></Link>
             </TabsTrigger>
