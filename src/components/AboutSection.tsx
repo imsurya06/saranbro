@@ -4,9 +4,8 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="w-full bg-black text-white py-8 md:py-12 lg:py-16"> {/* Reduced py-16 md:py-24 lg:py-32 */}
+    <section id="about" className="w-full bg-black text-white py-8 md:py-12 lg:py-16">
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
-        {/* Removed container mx-auto */}
         {/* Title */}
         <div className="flex justify-center md:justify-end mb-12">
           <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-heading font-bold text-center md:text-right">
@@ -16,24 +15,24 @@ const AboutSection = () => {
         {/* Main content container - vertical flow */}
         <div className="flex flex-col gap-16 lg:gap-24">
           {/* Top Section: Image (top on mobile), Description, Experience, Tools (bottom on mobile) - horizontal flow on large screens */}
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center lg:items-start">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center lg:items-stretch"> {/* Changed lg:items-start to lg:items-stretch to make children fill height */}
             {/* Right Image Column (now first for mobile) */}
             <div className="flex justify-center lg:justify-end lg:w-1/2">
-              <div className="w-full max-w-md lg:max-w-none rounded-lg overflow-hidden shadow-xl border border-gray-700">
-                <img src="/055A8314 (1).jpg" alt="Sharan working with camera" className="w-full h-auto object-cover" />
+              <div className="w-full max-w-md lg:max-w-none rounded-lg overflow-hidden shadow-xl border border-gray-700 h-full"> {/* Added h-full to make image wrapper fill height */}
+                <img src="/055A8314 (1).jpg" alt="Sharan working with camera" className="w-full h-full object-cover" /> {/* Changed h-auto to h-full to make image fill its container */}
               </div>
             </div>
             {/* Left Content Column: Description, Experience, Tools (now second for mobile) */}
-            <div className="flex flex-col space-y-8 lg:w-1/2 h-full items-center lg:items-start">
+            <div className="flex flex-col space-y-8 lg:w-1/2 h-full items-center lg:items-start justify-between"> {/* Added justify-between to distribute content vertically */}
               {/* Description */}
-              <div className="text-left">
+              <div className="text-left w-full">
                 <h3 className="text-2xl font-bold mb-2">Description</h3>
                 <p className="text-base lg:text-lg text-gray-300 max-w-lg lg:mx-0">
                   A passionate cinematographer with 3+ years of experience, I specialize in translating vision into cinematic storytelling, blending light, composition, and motion to create immersive visuals.
                 </p>
               </div>
               {/* Experience */}
-              <div className="text-left">
+              <div className="text-left w-full">
                 <h3 className="text-2xl font-bold mb-2">Experience</h3>
                 <p className="text-base lg:text-lg text-gray-300">
                   <span className="font-bold">Cameraman & Video Editor | Envision Media works</span>
@@ -42,7 +41,7 @@ const AboutSection = () => {
                 </p>
               </div>
               {/* Tools */}
-              <div className="text-left">
+              <div className="text-left w-full">
                 <h3 className="text-2xl font-bold mb-2">Tools</h3>
                 <p className="text-base lg:text-lg text-gray-300">
                   Adobe Premiere Pro, Davinci Resolve, After Effects
