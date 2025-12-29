@@ -32,7 +32,8 @@ const videographyVideos = [
   { src: "https://drive.google.com/file/d/11ggxZfbhuAN6A3P_B7dKl4ZIX4mjdqwY/preview", title: "Next Google Drive Video" },
   { src: "https://drive.google.com/file/d/1JtP4ShVqfNibeeluhQHM4Xj3KGr2vl20/preview", title: "New Google Drive Video" },
   { src: "https://drive.google.com/file/d/1DznzpDRkhNNFTlVqYpwPyYL3geiflrGi/preview", title: "Latest Google Drive Video" },
-  { src: "https://drive.google.com/file/d/1ssQxSYnjt_r6SXnpQSO7TZB9-n3sV8Q8/preview", title: "Another New Google Drive Video" }, // Added this new video at the end
+  { src: "https://drive.google.com/file/d/1ssQxSYnjt_r6SXnpQSO7TZB9-n3sV8Q8/preview", title: "Another New Google Drive Video" },
+  { src: "https://drive.google.com/file/d/1HnlEr7r6MKXCh1nVck-k0PLdirGO6uJs/preview", title: "Yet Another Google Drive Video" }, // Added this new video at the end
 ];
 
 const Works = () => {
