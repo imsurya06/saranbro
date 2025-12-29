@@ -15,38 +15,36 @@ const AboutSection = () => {
         {/* Main content container - vertical flow */}
         <div className="flex flex-col gap-16 lg:gap-24">
           {/* Top Section: Image (top on mobile), Description, Experience, Tools (bottom on mobile) - horizontal flow on large screens */}
-          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center lg:items-stretch"> {/* Reduced gap-12 to gap-8 and lg:gap-24 to lg:gap-16 */}
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center lg:items-stretch">
             {/* Left Content Column: Description, Experience, Tools (now first for desktop) */}
-            <div className="flex flex-col lg:w-1/2 h-full items-center lg:items-center">
-              <div className="flex flex-col h-full justify-between"> {/* New container for description, experience, tools */}
-                {/* Description */}
-                <div className="text-left w-full">
-                  <h3 className="text-2xl font-bold mb-2">Description</h3>
-                  <p className="text-base lg:text-lg text-gray-300 max-w-lg lg:mx-0">
-                    A passionate cinematographer with 3+ years of experience, I specialize in translating vision into cinematic storytelling, blending light, composition, and motion to create immersive visuals.
-                  </p>
-                </div>
-                {/* Experience */}
-                <div className="text-left w-full">
-                  <h3 className="text-2xl font-bold mb-2">Experience</h3>
-                  <p className="text-base lg:text-lg text-gray-300">
-                    <span className="font-bold">Cameraman & Video Editor | Envision Media works</span>
-                    <br />
-                    Duration: June 2024 - Present (1.5 years)
-                  </p>
-                </div>
-                {/* Tools */}
-                <div className="text-left w-full">
-                  <h3 className="text-2xl font-bold mb-2">Tools</h3>
-                  <p className="text-base lg:text-lg text-gray-300">
-                    Adobe Premiere Pro, Davinci Resolve, After Effects
-                  </p>
-                </div>
+            <div className="flex flex-col space-y-8 lg:w-1/2 h-full items-center lg:items-start justify-center"> {/* Changed justify-between to justify-center and added space-y-8 */}
+              {/* Description */}
+              <div className="text-left w-full">
+                <h3 className="text-2xl font-bold mb-2">Description</h3>
+                <p className="text-base lg:text-lg text-gray-300 max-w-lg lg:mx-0">
+                  A passionate cinematographer with 3+ years of experience, I specialize in translating vision into cinematic storytelling, blending light, composition, and motion to create immersive visuals.
+                </p>
+              </div>
+              {/* Experience */}
+              <div className="text-left w-full">
+                <h3 className="text-2xl font-bold mb-2">Experience</h3>
+                <p className="text-base lg:text-lg text-gray-300">
+                  <span className="font-bold">Cameraman & Video Editor | Envision Media works</span>
+                  <br />
+                  Duration: June 2024 - Present (1.5 years)
+                </p>
+              </div>
+              {/* Tools */}
+              <div className="text-left w-full">
+                <h3 className="text-2xl font-bold mb-2">Tools</h3>
+                <p className="text-base lg:text-lg text-gray-300">
+                  Adobe Premiere Pro, Davinci Resolve, After Effects
+                </p>
               </div>
             </div>
             {/* Right Image Column (now second for desktop) */}
             <div className="flex justify-center lg:justify-end lg:w-1/2">
-              <div className="w-full max-w-md lg:max-w-lg rounded-lg overflow-hidden shadow-xl border border-gray-700 h-full">
+              <div className="w-full max-w-md lg:max-w-none rounded-lg overflow-hidden shadow-xl border border-gray-700 h-full">
                 <img src="/055A8314 (1).jpg" alt="Sharan working with camera" className="w-full h-full object-cover" />
               </div>
             </div>
