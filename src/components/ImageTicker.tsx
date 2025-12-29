@@ -1,11 +1,8 @@
 "use client";
 
 import React, { useRef, useEffect, useState } from "react";
-import {
-  Dialog,
-  DialogContent,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { X } from "lucide-react";
 
 const images = [
   "/DSC00975.JPG",
@@ -41,10 +38,7 @@ const ImageTicker = () => {
   const ImageSet = ({ setRef }: { setRef?: React.RefObject<HTMLDivElement> }) => (
     <div ref={setRef} className="flex gap-x-2 flex-shrink-0">
       {images.map((src, index) => (
-        <div
-          key={index}
-          className="w-[70vw] md:w-[400px] lg:w-[500px]"
-        >
+        <div key={index} className="w-[70vw] md:w-[400px] lg:w-[500px]">
           <Dialog>
             <DialogTrigger asChild>
               <img
@@ -54,11 +48,16 @@ const ImageTicker = () => {
               />
             </DialogTrigger>
             <DialogContent className="max-w-4xl max-h-[90vh] p-0 border-0 bg-transparent shadow-none">
-              <img
-                src={selectedImage || src}
-                alt="Preview"
-                className="w-full h-full object-contain max-h-[80vh]"
-              />
+              <div className="relative">
+                <img
+                  src={selectedImage || src}
+                  alt="Preview"
+                  className="w-full h-full object-contain max-h-[80vh]"
+                />
+                <button className="absolute top-4 right-4 p-2 bg-black/50 rounded-full text-white hover:bg-black/70 transition-colors">
+                  <X className="h-6 w-6" />
+                </button>
+              </div>
             </DialogContent>
           </Dialog>
         </div>
