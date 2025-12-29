@@ -25,7 +25,7 @@ const Index = () => {
       <ImageTickerReverse />
       <ViewAllButton href="/works?tab=photography" /> {/* Re-added and linked to photography tab */}
       <AboutSection />
-      <VideographySection videos={videographyVideos} />
+      <VideographySection videos={videographyVideos} parallaxEffect={true} /> {/* Enabled parallax effect */}
       <ViewAllButton href="/works?tab=videography" /> {/* Updated this View All button to link to the videography tab on the Works page */}
       <Footer /> {/* Add the Footer component here */}
       <MadeWithDyad />
