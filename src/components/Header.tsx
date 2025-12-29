@@ -85,20 +85,22 @@ const Header = () => {
         >
           <X size={24} />
         </Button>
-        <div className="flex flex-col space-y-8 items-center"> {/* Added items-center for centering */}
+        <div className="flex flex-col space-y-8 items-center">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-white text-3xl font-semibold hover:text-gray-300 transition-colors duration-300 flex items-center" // Added flex items-center
+              className="text-white text-3xl font-medium hover:text-gray-300 transition-colors duration-300 flex items-center" // Changed font-semibold to font-medium
             >
               {link.name}
-              {link.icon && <span className="ml-2">{link.icon}</span>} {/* Render icon if present */}
+              {link.icon && <span className="ml-2">{link.icon}</span>}
             </Link>
           ))}
+          {/* "Get in touch" text */}
+          <p className="text-gray-300 text-lg mt-12 mb-4">get in touch</p> {/* Added "get in touch" text */}
           {/* Social Media Icons */}
-          <div className="flex space-x-6 mt-12"> {/* Added mt-12 for spacing from links */}
+          <div className="flex space-x-6"> {/* Removed mt-12 as it's now on the p tag */}
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <Instagram size={32} />
             </a>
