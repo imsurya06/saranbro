@@ -37,7 +37,7 @@ const Works = () => {
     <div className="min-h-screen bg-black text-white">
       <Header />
       <main className="pt-24 pb-16 px-4 sm:px-6 md:px-8 lg:px-[200px] xl:px-[200px]">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold text-center liquid-glass-text mb-20 h-fit">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold text-center liquid-glass-text mb-20">
           My Works
         </h1>
 
