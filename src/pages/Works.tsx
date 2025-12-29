@@ -49,6 +49,7 @@ const reelsVideos = [
   { src: "https://drive.google.com/file/d/1yd4NIsi3huoLh4besHQd2bXLv0wQ7g9M/preview", title: "Reel 3" },
   { src: "https://drive.google.com/file/d/1H6tfEIY-qHyXBlZ0UVAngM-FHHrnZKKo/preview", title: "Reel 4" },
   { src: "https://drive.google.com/file/d/1SoZC5WzyOBhV_QVJ5jLBLRME-7hsOFsn/preview", title: "Reel 5" },
+  { src: "https://drive.google.com/file/d/1azR9kBtbCfj5ec9LpMzab0kH9_TQMFqO/preview", title: "Reel 6" },
 ];
 
 const Works = () => {
