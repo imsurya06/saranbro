@@ -9,6 +9,7 @@ import { ImageIcon, VideoIcon, Film, ChevronDown } from "lucide-react"; // Added
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import VideographySection from "@/components/VideographySection";
+import ReelsGrid from "@/components/ReelsGrid"; // Import the new ReelsGrid component
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import { cn } from "@/lib/utils"; // Import cn for conditional classNames
 
@@ -39,6 +40,10 @@ const videographyVideos = [
   { src: "https://drive.google.com/file/d/1gwZKr4g2hvZtzJGINn6e0vemjZW_NkCN/preview", title: "Newest Google Drive Video" },
   { src: "https://drive.google.com/file/d/1aAEm6tb2uQrXV1P4OYtkMShWNqaN47T0/preview", title: "Another Latest Google Drive Video" },
   { src: "https://drive.google.com/file/d/1mbyk8blTx9UXIbssSd5Fd8cnapVzKANB/preview", title: "New Google Drive Video" },
+];
+
+const reelsVideos = [
+  // Your reels content will go here
 ];
 
 const Works = () => {
@@ -90,14 +95,18 @@ const Works = () => {
 
             <TabsTrigger
               value="videography"
-              // Removed conditional styling from TabsTrigger as it's now applied directly to DropdownMenuTrigger
-              className="transition-all duration-300 ease-in-out rounded-full text-base sm:text-lg py-2 flex items-center justify-center space-x-2"
+              className={cn(
+                "transition-all duration-300 ease-in-out rounded-full text-base sm:text-lg py-2 flex items-center justify-center space-x-2",
+                activeTab === "videography"
+                  ? "bg-white/10 text-white shadow-sm backdrop-blur-sm border border-white/20"
+                  : "text-white/70 hover:text-white"
+              )}
               asChild
             >
               <DropdownMenu>
                 <DropdownMenuTrigger
                   className={cn(
-                    "flex items-center justify-center space-x-2 w-full h-full focus-visible:outline-none rounded-full", // Added rounded-full here
+                    "flex items-center justify-center space-x-2 w-full h-full focus-visible:outline-none rounded-full",
                     activeTab === "videography"
                       ? "bg-white/10 text-white shadow-sm backdrop-blur-sm border border-white/20"
                       : "text-white/70 hover:text-white"
@@ -110,7 +119,7 @@ const Works = () => {
                 <DropdownMenuContent className="bg-gray-900 border border-white/20 text-white rounded-lg p-1">
                   <DropdownMenuItem
                     onClick={() => {
-                      setActiveTab("videography"); // Ensure main tab is active
+                      setActiveTab("videography");
                       setSelectedVideographySubTab("videos");
                     }}
                     className={cn(
@@ -123,7 +132,7 @@ const Works = () => {
                   </DropdownMenuItem>
                   <DropdownMenuItem
                     onClick={() => {
-                      setActiveTab("videography"); // Ensure main tab is active
+                      setActiveTab("videography");
                       setSelectedVideographySubTab("reels");
                     }}
                     className={cn(
@@ -164,15 +173,12 @@ const Works = () => {
 
           <TabsContent
             value="videography"
-            className="-mx-4 sm:-mx-6 md:-mx-8 lg:-mx-[200px] xl:-mx-[200px]" // Apply negative margins to span full width
+            className="-mx-4 sm:-mx-6 md:-mx-8 lg:-mx-[200px] xl:-mx-[200px]"
           >
             {selectedVideographySubTab === "videos" ? (
               <VideographySection videos={videographyVideos} showTitle={false} />
             ) : (
-              <div className="flex flex-col items-center justify-center h-64 text-gray-400">
-                <Film className="h-16 w-16 mb-4" />
-                <p className="text-xl">Reels content coming soon!</p>
-              </div>
+              <ReelsGrid videos={reelsVideos} /> // Render ReelsGrid here
             )}
           </TabsContent>
         </Tabs>
