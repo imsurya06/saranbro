@@ -50,6 +50,7 @@ const reelsVideos = [
   { src: "https://drive.google.com/file/d/1H6tfEIY-qHyXBlZ0UVAngM-FHHrnZKKo/preview", title: "Reel 4" },
   { src: "https://drive.google.com/file/d/1SoZC5WzyOBhV_QVJ5jLBLRME-7hsOFsn/preview", title: "Reel 5" },
   { src: "https://drive.google.com/file/d/1azR9kBtbCfj5ec9LpMzab0kH9_TQMFqO/preview", title: "Reel 6" },
+  { src: "https://drive.google.com/file/d/1Jq9bh-swknJ14aAZvMEBOa-_g3v76jBY/preview", title: "Reel 7" },
 ];
 
 const Works = () => {
