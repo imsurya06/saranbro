@@ -1,6 +1,11 @@
 "use client";
 
 import React, { useRef, useEffect, useState } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const images = [
   "/DSC00975.JPG",
@@ -12,6 +17,7 @@ const images = [
 const ImageTicker = () => {
   const imageSetRef = useRef<HTMLDivElement>(null);
   const [imageSetWidth, setImageSetWidth] = useState(0);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
     const calculateWidth = () => {
@@ -39,11 +45,23 @@ const ImageTicker = () => {
           key={index}
           className="w-[70vw] h-[40vh] md:w-[400px] md:h-[250px] lg:w-[500px] lg:h-[300px]"
         >
-          <img
-            src={src}
-            alt={`Ticker Image ${index + 1}`}
-            className="w-full h-full object-cover rounded-lg shadow-lg md:rounded-lg md:shadow-lg"
-          />
+          <Dialog>
+            <DialogTrigger asChild>
+              <img
+                src={src}
+                alt={`Ticker Image ${index + 1}`}
+                className="w-full h-full object-cover rounded-lg shadow-lg md:rounded-lg md:shadow-lg cursor-pointer"
+                onClick={() => setSelectedImage(src)}
+              />
+            </DialogTrigger>
+            <DialogContent className="max-w-4xl max-h-[90vh] p-0 border-0 bg-transparent shadow-none">
+              <img
+                src={selectedImage || src}
+                alt="Preview"
+                className="w-full h-full object-contain max-h-[80vh]"
+              />
+            </DialogContent>
+          </Dialog>
         </div>
       ))}
     </div>
