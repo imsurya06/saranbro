@@ -22,7 +22,8 @@ const photographyImages = [
   "/SHAL4208.JPG",
   "/0C8A3100.JPG",
   "/148A9514.JPG",
-  "/DSC00890.JPG", // Added the new image here
+  "/DSC00890.JPG",
+  "https://drive.google.com/file/d/1pI45mCmLbxrK267wgdLsZqYlkt0fBZ60/preview", // Added the new image link here
   // Add more photography image paths here
 ];
 
