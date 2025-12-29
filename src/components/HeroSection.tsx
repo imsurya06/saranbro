@@ -25,7 +25,7 @@ const HeroSection = () => {
               Viscom student with a passion for cinematography and visual storytelling.
             </p>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans font-semibold w-full text-left flex items-start gap-1">
-              I can do: <span className="font-bold inline-block max-w-[200px]">Cinematography, Photography, Post Production.</span>
+              I can do: <span className="font-bold inline-block max-w-[180px]">Cinematography, Photography, Post Production.</span>
             </p>
             {/* Changed Button to an <a> tag with mailto link */}
             <a 
