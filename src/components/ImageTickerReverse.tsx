@@ -14,7 +14,6 @@ const images = [
 const ImageTickerReverse = () => {
   const imageSetRef = useRef<HTMLDivElement>(null);
   const [imageSetWidth, setImageSetWidth] = useState(0);
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
     const calculateWidth = () => {
@@ -45,11 +44,20 @@ const ImageTickerReverse = () => {
             <DialogContent className="max-w-4xl max-h-[90vh] p-0 border-0 bg-transparent shadow-none">
               <div className="relative">
                 <img
-                  src={selectedImage || src}
+                  src={src}
                   alt="Preview"
                   className="w-full h-full object-contain max-h-[80vh]"
                 />
-                <button className="absolute top-4 right-4 p-2 bg-black/50 rounded-full text-white hover:bg-black/70 transition-colors">
+                <button 
+                  className="absolute top-4 right-4 p-2 bg-black/50 rounded-full text-white hover:bg-black/70 transition-colors"
+                  onClick={() => {
+                    // Close the dialog by finding and clicking the close button
+                    const closeBtn = document.querySelector('[data-state="open"] [aria-label="Close"]');
+                    if (closeBtn) {
+                      (closeBtn as HTMLElement).click();
+                    }
+                  }}
+                >
                   <X className="h-6 w-6" />
                 </button>
               </div>
