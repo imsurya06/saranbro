@@ -15,7 +15,7 @@ const AboutSection = () => {
         {/* Main content container - vertical flow */}
         <div className="flex flex-col gap-16 lg:gap-24">
           {/* Top Section: Image (top on mobile), Description, Experience, Tools (bottom on mobile) - horizontal flow on large screens */}
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center lg:items-stretch h-full"> {/* Added h-full here */}
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center lg:items-stretch h-full">
             {/* Left Content Column: Description, Experience, Tools (now first for desktop) */}
             <div className="flex flex-col lg:w-1/2 h-full items-center lg:items-start">
               <div className="flex flex-col h-full justify-between"> {/* New container for description, experience, tools */}
@@ -46,7 +46,7 @@ const AboutSection = () => {
             </div>
             {/* Right Image Column (now second for desktop) */}
             <div className="flex justify-center lg:justify-end lg:w-1/2">
-              <div className="w-full max-w-md lg:max-w-none rounded-lg overflow-hidden shadow-xl border border-gray-700 h-full">
+              <div className="w-full max-w-md lg:max-w-lg rounded-lg overflow-hidden shadow-xl border border-gray-700 h-full"> {/* Changed lg:max-w-none to lg:max-w-lg */}
                 <img src="/055A8314 (1).jpg" alt="Sharan working with camera" className="w-full h-full object-cover" />
               </div>
             </div>
