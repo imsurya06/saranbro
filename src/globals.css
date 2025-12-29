@@ -96,7 +96,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-light text-sm;
+    @apply bg-background text-foreground font-light text-xs sm:text-sm; /* Changed text-sm to text-xs and added sm:text-sm */
   }
 }
 
