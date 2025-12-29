@@ -29,7 +29,7 @@ const HeroSection = () => {
           <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tight">
             Sharan.
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans max-w-md">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans max-w-xs sm:max-w-sm md:max-w-md lg:max-w-sm">
             Viscom student with a passion for cinematography and visual storytelling.
           </p>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans font-semibold max-w-md">
