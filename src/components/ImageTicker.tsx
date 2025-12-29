@@ -26,7 +26,6 @@ const ImageTicker = () => {
 
     // Recalculate on window resize
     window.addEventListener("resize", calculateWidth);
-
     return () => {
       window.removeEventListener("resize", calculateWidth);
     };
@@ -43,7 +42,7 @@ const ImageTicker = () => {
           <img
             src={src}
             alt={`Ticker Image ${index + 1}`}
-            className="w-full h-full object-contain rounded-lg shadow-lg"
+            className="w-full h-full object-contain rounded-lg shadow-lg md:rounded-lg md:shadow-lg"
           />
         </div>
       ))}
@@ -51,10 +50,15 @@ const ImageTicker = () => {
   );
 
   return (
-    <section className="w-full overflow-hidden py-0 bg-gray-950"> {/* Changed py-8 to py-0 */}
+    <section className="w-full overflow-hidden py-0 bg-gray-950">
+      {/* Changed py-8 to py-0 */}
       <div
         className="flex animate-ticker"
-        style={{ "--image-set-width": `${imageSetWidth}px` } as React.CSSProperties}
+        style={
+          {
+            "--image-set-width": `${imageSetWidth}px`,
+          } as React.CSSProperties
+        }
       >
         <ImageSet setRef={imageSetRef} />
         <ImageSet />

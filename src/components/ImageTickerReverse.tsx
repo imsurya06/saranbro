@@ -22,7 +22,6 @@ const ImageTickerReverse = () => {
 
     calculateWidth();
     window.addEventListener("resize", calculateWidth);
-
     return () => {
       window.removeEventListener("resize", calculateWidth);
     };
@@ -38,7 +37,7 @@ const ImageTickerReverse = () => {
           <img
             src={src}
             alt={`Ticker Image ${index + 1}`}
-            className="w-full h-full object-contain rounded-lg shadow-lg"
+            className="w-full h-full object-contain rounded-lg shadow-lg md:rounded-lg md:shadow-lg"
           />
         </div>
       ))}
@@ -48,8 +47,13 @@ const ImageTickerReverse = () => {
   return (
     <section className="w-full overflow-hidden py-0 bg-gray-950">
       <div
-        className="flex animate-ticker-reverse" // Using the new reverse animation
-        style={{ "--image-set-width": `${imageSetWidth}px` } as React.CSSProperties}
+        className="flex animate-ticker-reverse"
+        // Using the new reverse animation
+        style={
+          {
+            "--image-set-width": `${imageSetWidth}px`,
+          } as React.CSSProperties
+        }
       >
         <ImageSet setRef={imageSetRef} />
         <ImageSet />
