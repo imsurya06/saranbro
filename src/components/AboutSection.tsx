@@ -15,9 +15,9 @@ const AboutSection = () => {
         {/* Main content container - vertical flow */}
         <div className="flex flex-col gap-16 lg:gap-24">
           {/* Top Section: Image (top on mobile), Description, Experience, Tools (bottom on mobile) - horizontal flow on large screens */}
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center lg:items-stretch">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center lg:items-stretch h-full"> {/* Added h-full here */}
             {/* Left Content Column: Description, Experience, Tools (now first for desktop) */}
-            <div className="flex flex-col lg:w-1/2 h-full items-center lg:items-start"> {/* Removed space-y-8 and justify-center */}
+            <div className="flex flex-col lg:w-1/2 h-full items-center lg:items-start">
               <div className="flex flex-col h-full justify-between"> {/* New container for description, experience, tools */}
                 {/* Description */}
                 <div className="text-left w-full">
