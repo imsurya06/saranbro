@@ -21,14 +21,14 @@ const AboutSection = () => {
               {/* Description */}
               <div className="text-left w-full">
                 <h3 className="text-2xl font-bold mb-2">Description</h3>
-                <p className="text-lg md:text-xl text-gray-300 max-w-lg md:max-w-xl md:mx-0">
+                <p className="text-base md:text-lg text-gray-300 max-w-lg md:max-w-xl md:mx-0">
                   A passionate cinematographer with 3+ years of experience, I specialize in translating vision into cinematic storytelling, blending light, composition, and motion to create immersive visuals.
                 </p>
               </div>
               {/* Experience */}
               <div className="text-left w-full">
                 <h3 className="text-2xl font-bold mb-2">Experience</h3>
-                <p className="text-lg md:text-xl text-gray-300">
+                <p className="text-base md:text-lg text-gray-300">
                   <span className="font-bold">Cameraman & Video Editor | Envision Media works</span>
                   <br />
                   Duration: June 2024 - Present (1.5 years)
@@ -37,7 +37,7 @@ const AboutSection = () => {
               {/* Tools */}
               <div className="text-left w-full">
                 <h3 className="text-2xl font-bold mb-2">Tools</h3>
-                <p className="text-lg md:text-xl text-gray-300">
+                <p className="text-base md:text-lg text-gray-300">
                   Adobe Premiere Pro, Davinci Resolve, After Effects
                 </p>
               </div>
