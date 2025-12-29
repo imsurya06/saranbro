@@ -73,8 +73,9 @@ const Header = () => {
       {/* Mobile Navigation Overlay */}
       <div
         className={cn(
-          "fixed inset-0 bg-black bg-opacity-90 z-40 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out md:hidden",
-          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          "fixed inset-0 z-40 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out md:hidden",
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full",
+          "liquid-glass-bg" // Applied the new liquid glass background class
         )}
       >
         <Button
@@ -91,16 +92,16 @@ const Header = () => {
               key={link.name}
               to={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-white text-3xl font-medium hover:text-gray-300 transition-colors duration-300 flex items-center" // Changed font-semibold to font-medium
+              className="text-white text-3xl font-medium hover:text-gray-300 transition-colors duration-300 flex items-center"
             >
               {link.name}
               {link.icon && <span className="ml-2">{link.icon}</span>}
             </Link>
           ))}
           {/* "Get in touch" text */}
-          <p className="text-gray-300 text-lg mt-12 mb-4">get in touch</p> {/* Added "get in touch" text */}
+          <p className="text-gray-300 text-lg mt-12 mb-4">get in touch</p>
           {/* Social Media Icons */}
-          <div className="flex space-x-6"> {/* Removed mt-12 as it's now on the p tag */}
+          <div className="flex space-x-6">
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <Instagram size={32} />
             </a>
