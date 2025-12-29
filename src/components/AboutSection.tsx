@@ -4,8 +4,8 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="w-full bg-black text-white pt-10 pb-8 md:pb-10 lg:pb-12 h-[90vh] flex flex-col justify-center">
-      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[200px] xl:px-[200px]"> {/* Added lg:px-[200px] and xl:px-[200px] */}
+    <section id="about" className="w-full bg-black text-white pt-10 pb-8 md:pb-10 lg:pb-12 flex flex-col justify-center"> {/* Removed h-[90vh] */}
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[200px] xl:px-[200px]">
         {/* Title */}
         <div className="flex justify-center md:justify-end mb-8 md:mb-10">
           <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-heading font-bold text-center md:text-right">
