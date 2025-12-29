@@ -19,7 +19,7 @@ const HeroSection = () => {
           {/* Left Content - Centered on mobile */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6 md:w-1/2">
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tight">
-              Sharan.
+              Sharan,
             </h1>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans max-w-xs sm:max-w-sm">
               Viscom student with a passion for cinematography and visual storytelling.
