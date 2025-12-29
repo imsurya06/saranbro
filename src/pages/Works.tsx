@@ -23,7 +23,11 @@ const photographyImages = [
 ];
 
 const videographyVideos = [
-  { src: "https://drive.google.com/file/d/1pdQiu9TqUWiI2Tu0evlW0TZoTm1Vhnuv/preview", title: "New Google Drive Video" },
+  { vimeoId: "1149860125", title: "First Videography Project" },
+  { vimeoId: "1149860178", title: "Second Videography Project" },
+  { vimeoId: "1149860280", title: "Third Videography Project" },
+  { src: "https://drive.google.com/file/d/10TuBPro-0givS0BsN9StoxYpiaU8r_D_/preview", title: "Google Drive Video" },
+  { src: "https://drive.google.com/file/d/1Hx_pW1sotGI5zBTfSBEWaMaHSCL0pLx4/preview", title: "Another Google Drive Video" }, // Added the new Google Drive video
 ];
 
 const Works = () => {
