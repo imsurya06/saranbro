@@ -4,7 +4,7 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="w-full bg-black text-white py-8 md:py-12 lg:py-16">
+    <section id="about" className="w-full bg-black text-white py-8 md:py-12 lg:py-16 h-[90vh]"> {/* Added h-[90vh] */}
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
         {/* Title */}
         <div className="flex justify-center md:justify-end mb-12">
