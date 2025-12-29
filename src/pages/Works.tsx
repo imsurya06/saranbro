@@ -90,16 +90,19 @@ const Works = () => {
 
             <TabsTrigger
               value="videography"
-              className={cn(
-                "transition-all duration-300 ease-in-out rounded-full text-base sm:text-lg py-2 flex items-center justify-center space-x-2",
-                activeTab === "videography"
-                  ? "bg-white/10 text-white shadow-sm backdrop-blur-sm border border-white/20"
-                  : "text-white/70 hover:text-white"
-              )}
-              asChild // Use asChild to pass props to the DropdownMenuTrigger
+              // Removed conditional styling from TabsTrigger as it's now applied directly to DropdownMenuTrigger
+              className="transition-all duration-300 ease-in-out rounded-full text-base sm:text-lg py-2 flex items-center justify-center space-x-2"
+              asChild
             >
               <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center justify-center space-x-2 w-full h-full focus-visible:outline-none">
+                <DropdownMenuTrigger
+                  className={cn(
+                    "flex items-center justify-center space-x-2 w-full h-full focus-visible:outline-none",
+                    activeTab === "videography"
+                      ? "bg-white/10 text-white shadow-sm backdrop-blur-sm border border-white/20"
+                      : "text-white/70 hover:text-white"
+                  )}
+                >
                   <Film className="h-5 w-5" />
                   <span>Videography</span>
                   <ChevronDown className="h-4 w-4 opacity-50" />
