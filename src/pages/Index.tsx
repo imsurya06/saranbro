@@ -22,9 +22,10 @@ const Index = () => {
       <HeroSection />
       <ImageTicker />
       <ImageTickerReverse />
-      <ViewAllButton />
+      <ViewAllButton /> {/* This one is for the image tickers */}
       <AboutSection />
       <VideographySection videos={videographyVideos} />
+      <ViewAllButton /> {/* Added this View All button for the videography section */}
       <MadeWithDyad />
     </div>
   );
