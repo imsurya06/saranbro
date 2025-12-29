@@ -43,7 +43,7 @@ const HeroSection = () => {
               alt="Sharan playing chess" 
               className="w-56 sm:w-64 md:w-72 h-auto rounded-lg shadow-lg" 
             />
-            <p className="text-xs sm:text-sm md:text-base font-sans max-w-xs">
+            <p className="text-sm sm:text-base md:text-lg font-sans max-w-xs">
               Creating cinematic imagery with clarity, emotion, and intention.
             </p>
           </div>
