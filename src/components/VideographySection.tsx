@@ -3,7 +3,8 @@
 import React from "react";
 
 interface VideoProps {
-  vimeoId: string;
+  vimeoId?: string; // Made optional
+  src?: string; // Added for direct iframe sources
   title: string;
 }
 
@@ -25,14 +26,27 @@ const VideographySection = ({ videos, showTitle = true }: VideographySectionProp
       <div className="w-full flex flex-col gap-8">
         {videos.map((video, index) => (
           <div key={index} className="relative w-full" style={{ paddingBottom: "56.25%" /* 16:9 Aspect Ratio */ }}>
-            <iframe
-              src={`https://player.vimeo.com/video/${video.vimeoId}?background=1`}
-              frameBorder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowFullScreen
-              className="absolute top-0 left-0 w-full h-full"
-              title={video.title}
-            ></iframe>
+            {video.vimeoId ? (
+              <iframe
+                src={`https://player.vimeo.com/video/${video.vimeoId}?background=1`}
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full"
+                title={video.title}
+              ></iframe>
+            ) : video.src ? (
+              <iframe
+                src={video.src}
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                allow="autoplay"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full"
+                title={video.title}
+              ></iframe>
+            ) : null}
           </div>
         ))}
       </div>

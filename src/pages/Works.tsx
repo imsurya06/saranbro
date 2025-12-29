@@ -26,6 +26,7 @@ const videographyVideos = [
   { vimeoId: "1149860125", title: "First Videography Project" },
   { vimeoId: "1149860178", title: "Second Videography Project" },
   { vimeoId: "1149860280", title: "Third Videography Project" },
+  { src: "https://drive.google.com/file/d/10TuBPro-0givS0BsN9StoxYpiaU8r_D_/preview", title: "Google Drive Video" }, // Added the new Google Drive video
 ];
 
 const Works = () => {
