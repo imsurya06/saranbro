@@ -4,7 +4,7 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="w-full bg-black text-white py-16 md:py-24 lg:py-32">
+    <section id="about" className="w-full bg-black text-white py-8 md:py-12 lg:py-16"> {/* Reduced py-16 md:py-24 lg:py-32 */}
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24">
         {/* Removed container mx-auto */}
         {/* Title */}

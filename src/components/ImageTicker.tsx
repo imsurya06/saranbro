@@ -53,18 +53,7 @@ const ImageTicker = () => {
                   alt="Preview"
                   className="w-full h-full object-contain max-h-[80vh]"
                 />
-                <button 
-                  className="absolute top-4 right-4 p-2 bg-black/50 rounded-full text-white hover:bg-black/70 transition-colors"
-                  onClick={() => {
-                    // Close the dialog by finding and clicking the close button
-                    const closeBtn = document.querySelector('[data-state="open"] [aria-label="Close"]');
-                    if (closeBtn) {
-                      (closeBtn as HTMLElement).click();
-                    }
-                  }}
-                >
-                  <X className="h-6 w-6" />
-                </button>
+                {/* Removed the custom close button */}
               </div>
             </DialogContent>
           </Dialog>
