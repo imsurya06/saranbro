@@ -24,10 +24,7 @@ const photographyImages = [
   "/148A9514.JPG",
   "/DSC00890.JPG",
   "/_JPM8546.JPG",
-  // Removed: "/0C8A3294.JPG",
-  // Removed: "/0C8A3317.JPG",
-  // Removed: "/0C8A3331.JPG",
-  // Removed: "/0C8A3448.JPG",
+  "/148A9514.JPG", // Added new image
   // Add more photography image paths here
 ];
 
