@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"; // Keep Button import if it's used elsewhere, but we'll change this specific instance
 
 const HeroSection = () => {
   return (
@@ -27,9 +27,13 @@ const HeroSection = () => {
             <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans font-semibold text-center md:text-left">
               I can do: <span className="font-bold">Cinematography, Photography, Post Production.</span>
             </p>
-            <Button className="mt-2 px-6 py-4 sm:px-8 sm:py-6 text-base sm:text-lg md:text-xl bg-white/10 text-white border border-white/20 hover:bg-white/20 rounded-full transition-colors duration-300 animate-button-pulse">
+            {/* Changed Button to an <a> tag with mailto link */}
+            <a 
+              href="mailto:blackashsharan@gmail.com" 
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base sm:text-lg md:text-xl font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 mt-2 px-6 py-4 sm:px-8 sm:py-6 bg-white/10 text-white border border-white/20 hover:bg-white/20 duration-300 animate-button-pulse"
+            >
               Get in Touch
-            </Button>
+            </a>
           </div>
           
           {/* Right Content - Centered on mobile */}
