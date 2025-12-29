@@ -24,8 +24,7 @@ const photographyImages = [
   "/148A9514.JPG",
   "/DSC00890.JPG",
   "/_JPM8546.JPG",
-  "/SHA08322.JPG", // Added new image
-  // Add more photography image paths here
+  // Removed "/SHA08322.JPG"
 ];
 
 const videographyVideos = [
