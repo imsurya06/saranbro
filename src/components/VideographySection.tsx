@@ -10,7 +10,7 @@ interface VideoProps {
 const VideographySection = ({ videos }: { videos: VideoProps[] }) => {
   return (
     <section id="videography" className="w-full bg-black text-white py-16 md:py-20 lg:py-24 flex flex-col items-center">
-      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[200px] xl:px-[200px] mb-12">
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[200px] xl:px-[200px] pl-[80px] mb-12"> {/* Added pl-[80px] */}
         <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold text-center md:text-left">
           Videography
         </h2>
