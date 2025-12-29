@@ -43,7 +43,7 @@ const Works = () => {
         </h1>
 
         <Tabs defaultValue={initialTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-2 bg-gray-800 text-white rounded-full p-2 mb-8 mx-auto max-w-lg overflow-visible"> {/* Changed p-1 to p-2 */}
+          <TabsList className="grid w-full h-fit grid-cols-2 bg-gray-800 text-white rounded-full p-2 mb-8 mx-auto max-w-lg overflow-visible"> {/* Added h-fit */}
             <TabsTrigger
               value="photography"
               className="data-[state=active]:bg-white/10 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-full text-base sm:text-lg py-2"
