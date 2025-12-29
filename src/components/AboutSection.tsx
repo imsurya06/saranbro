@@ -17,7 +17,7 @@ const AboutSection = () => {
           {/* Top Section: Image (top on mobile), Description, Experience, Tools (bottom on mobile) - horizontal flow on large screens */}
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center lg:items-stretch">
             {/* Left Content Column: Description, Experience, Tools (now first for desktop) */}
-            <div className="flex flex-col lg:w-1/2 h-full items-center lg:items-start justify-between"> {/* Removed space-y-8 */}
+            <div className="flex flex-col space-y-8 lg:w-1/2 h-full items-center lg:items-start justify-center"> {/* Changed justify-between to justify-center and added space-y-8 */}
               {/* Description */}
               <div className="text-left w-full">
                 <h3 className="text-2xl font-bold mb-2">Description</h3>
