@@ -5,13 +5,14 @@ import { Link, useLocation } from "react-router-dom";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import { ImageIcon, VideoIcon, Film, ChevronDown } from "lucide-react"; // Added icons
+import { ImageIcon, VideoIcon, Film, ChevronDown, Instagram } from "lucide-react"; // Added Instagram icon
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import VideographySection from "@/components/VideographySection";
 import ReelsGrid from "@/components/ReelsGrid"; // Import the new ReelsGrid component
 import { MadeWithDyad } from "@/components/made-with-dyad";
 import { cn } from "@/lib/utils"; // Import cn for conditional classNames
+import { Button } from "@/components/ui/button"; // Import Button component
 
 const photographyImages = [
   "/DSC00975.JPG",
@@ -180,6 +181,18 @@ const Works = () => {
                   </Dialog>
                 </div>
               ))}
+            </div>
+            {/* "View more on my Instagram" button */}
+            <div className="flex justify-center py-8">
+              <a
+                href="https://www.instagram.com/_sharan_19__/" // Replace with your actual Instagram link
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base sm:text-lg md:text-xl font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 mt-2 px-6 py-4 sm:px-8 sm:py-6 bg-white/10 text-white border border-white/20 hover:bg-white/20 duration-300 animate-button-pulse"
+              >
+                <Instagram className="h-5 w-5 mr-2" />
+                <span>View more on my Instagram</span>
+              </a>
             </div>
           </TabsContent>
 
