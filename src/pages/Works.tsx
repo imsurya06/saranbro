@@ -82,7 +82,7 @@ const Works = () => {
           </TabsContent>
 
           <TabsContent value="videography">
-            <VideographySection videos={videographyVideos} />
+            <VideographySection videos={videographyVideos} showTitle={false} /> {/* Added showTitle={false} */}
           </TabsContent>
         </Tabs>
       </main>

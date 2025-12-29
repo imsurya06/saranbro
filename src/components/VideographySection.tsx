@@ -7,14 +7,21 @@ interface VideoProps {
   title: string;
 }
 
-const VideographySection = ({ videos }: { videos: VideoProps[] }) => {
+interface VideographySectionProps {
+  videos: VideoProps[];
+  showTitle?: boolean; // New prop to control title visibility
+}
+
+const VideographySection = ({ videos, showTitle = true }: VideographySectionProps) => {
   return (
     <section id="videography" className="w-full bg-black text-white py-16 md:py-20 lg:py-24 flex flex-col items-center">
-      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[200px] xl:px-[200px] mb-12">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold text-center liquid-glass-text pb-2"> {/* Added pb-2 here */}
-          Videography
-        </h2>
-      </div>
+      {showTitle && ( // Conditionally render the title
+        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[200px] xl:px-[200px] mb-12">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold text-center liquid-glass-text pb-2">
+            Videography
+          </h2>
+        </div>
+      )}
       <div className="w-full flex flex-col gap-8">
         {videos.map((video, index) => (
           <div key={index} className="relative w-full" style={{ paddingBottom: "56.25%" /* 16:9 Aspect Ratio */ }}>
