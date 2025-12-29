@@ -4,11 +4,11 @@ import React from "react";
 
 const AboutSection = () => {
   return (
-    <section id="about" className="w-full bg-black text-white pt-10 pb-16 md:pb-20 lg:pb-24 flex flex-col justify-center">
+    <section id="about" className="w-full bg-black text-white pt-10 pb-16 md:pb-20 lg:pb-24 flex flex-col justify-center"> {/* Increased bottom padding */}
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[200px] xl:px-[200px]">
         {/* Title */}
         <div className="flex justify-center md:justify-end mb-8 md:mb-10">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold text-center md:text-right">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold text-center md:text-right"> {/* Reduced text size */}
             About Me
           </h2>
         </div>
@@ -16,13 +16,7 @@ const AboutSection = () => {
         <div className="flex flex-col gap-8 md:gap-12">
           {/* Top Section: Image (top on mobile), Description, Experience, Tools (bottom on mobile) - horizontal flow on large screens */}
           <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-center md:items-stretch">
-            {/* Image Column (now first for mobile/tablet) */}
-            <div className="flex justify-center md:justify-end md:w-1/2">
-              <div className="w-full max-w-sm sm:max-w-md md:max-w-lg rounded-lg overflow-hidden shadow-xl border border-gray-700 h-full">
-                <img src="/055A8314 (1).jpg" alt="Sharan working with camera" className="w-full h-full object-cover" />
-              </div>
-            </div>
-            {/* Left Content Column: Description, Experience, Tools (now second for mobile/tablet) */}
+            {/* Left Content Column: Description, Experience, Tools (now first for desktop) */}
             <div className="flex flex-col space-y-6 md:w-1/2 h-full items-center md:items-start justify-center">
               {/* Description */}
               <div className="text-left w-full">
@@ -46,6 +40,12 @@ const AboutSection = () => {
                 <p className="text-lg md:text-xl text-gray-300">
                   Adobe Premiere Pro, Davinci Resolve, After Effects
                 </p>
+              </div>
+            </div>
+            {/* Right Image Column (now second for desktop) */}
+            <div className="flex justify-center md:justify-end md:w-1/2">
+              <div className="w-full max-w-sm sm:max-w-md md:max-w-lg rounded-lg overflow-hidden shadow-xl border border-gray-700 h-full">
+                <img src="/055A8314 (1).jpg" alt="Sharan working with camera" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
