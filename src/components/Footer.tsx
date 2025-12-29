@@ -28,9 +28,9 @@ const Footer = () => {
           <Link to="/works" className="text-gray-300 hover:text-white transition-colors text-base md:text-lg"> {/* Updated href to /works */}
             Works
           </Link>
-          <Link to="/#contact" className="text-gray-300 hover:text-white transition-colors text-base md:text-lg flex items-center">
+          <a href="mailto:blackashsharan@gmail.com" className="text-gray-300 hover:text-white transition-colors text-base md:text-lg flex items-center"> {/* Changed to <a> tag and updated mailto link */}
             Contact <ChevronRight className="ml-1 h-4 w-4" />
-          </Link>
+          </a>
         </div>
 
         {/* Copyright */}
@@ -46,7 +46,7 @@ const Footer = () => {
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors border border-gray-700 rounded-full p-2">
             <Linkedin size={20} />
           </a>
-          <a href="mailto:your-email@example.com" className="text-gray-400 hover:text-white transition-colors border border-gray-700 rounded-full p-2">
+          <a href="mailto:blackashsharan@gmail.com" className="text-gray-400 hover:text-white transition-colors border border-gray-700 rounded-full p-2"> {/* Updated mailto link */}
             <Mail size={20} />
           </a>
         </div>

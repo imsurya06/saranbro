@@ -31,7 +31,7 @@ const Header = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Works", href: "/works" }, // Updated href to /works
-    { name: "Contact", href: "/#contact", icon: <ChevronRight size={24} /> }, // Added icon for Contact
+    { name: "Contact", href: "mailto:blackashsharan@gmail.com", icon: <ChevronRight size={24} /> }, // Updated Contact link to mailto
   ];
 
   return (
@@ -108,7 +108,7 @@ const Header = () => {
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <Linkedin size={32} />
             </a>
-            <a href="mailto:your-email@example.com" className="text-gray-400 hover:text-white transition-colors">
+            <a href="mailto:blackashsharan@gmail.com" className="text-gray-400 hover:text-white transition-colors"> {/* Updated mailto link */}
               <Mail size={32} />
             </a>
           </div>
