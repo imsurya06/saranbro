@@ -43,7 +43,7 @@ const videographyVideos = [
 ];
 
 const reelsVideos = [
-  // Your reels content will go here
+  { src: "https://drive.google.com/file/d/1ftkrt6_p2diz0yfYqNDEpAh6lYGSPXXp/preview", title: "Reel 1" },
 ];
 
 const Works = () => {
@@ -178,7 +178,7 @@ const Works = () => {
             {selectedVideographySubTab === "videos" ? (
               <VideographySection videos={videographyVideos} showTitle={false} />
             ) : (
-              <ReelsGrid videos={reelsVideos} /> // Render ReelsGrid here
+              <ReelsGrid videos={reelsVideos} />
             )}
           </TabsContent>
         </Tabs>
