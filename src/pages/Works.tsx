@@ -43,18 +43,22 @@ const Works = () => {
         </h1>
 
         <Tabs defaultValue={initialTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-2 bg-gray-800 text-white rounded-full p-2 mb-8 mx-auto max-w-lg overflow-visible"> {/* Changed p-1 to p-2 */}
+          <TabsList className="flex justify-center w-full text-white mb-8 mx-auto max-w-lg"> {/* Removed bg, rounded-full, p-2, grid-cols-2, overflow-visible */}
             <TabsTrigger
               value="photography"
-              className="data-[state=active]:bg-white/10 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-full text-base sm:text-lg py-2"
+              className="px-4 py-2 text-base sm:text-lg transition-colors duration-300
+                         data-[state=active]:text-white data-[state=active]:border-b-2 data-[state=active]:border-white
+                         hover:text-gray-300"
             >
               Photography
             </TabsTrigger>
             <TabsTrigger
               value="videography"
-              className="data-[state=active]:bg-white/10 data-[state=active]:text-white data-[state=active]:shadow-sm rounded-full text-base sm:text-lg py-2 flex items-center justify-center"
+              className="px-4 py-2 text-base sm:text-lg transition-colors duration-300
+                         data-[state=active]:text-white data-[state=active]:border-b-2 data-[state=active]:border-white
+                         hover:text-gray-300 flex items-center justify-center"
             >
-              Videography <Link to="/#videography" className="ml-2 text-gray-400 hover:text-white transition-colors"></Link>
+              Videography {/* Removed the empty Link component */}
             </TabsTrigger>
           </TabsList>
 
