@@ -13,9 +13,9 @@ const AboutSection = () => {
           </h2>
         </div>
         {/* Main content container - vertical flow */}
-        <div className="flex flex-col gap-12 md:gap-16"> {/* Increased gap from gap-8 md:gap-12 to gap-12 md:gap-16 */}
+        <div className="flex flex-col gap-8 md:gap-12">
           {/* Top Section: Image (top on mobile), Description, Experience, Tools (bottom on mobile) - horizontal flow on large screens */}
-          <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center md:items-stretch"> {/* Increased gap from gap-6 md:gap-10 to gap-8 md:gap-12 */}
+          <div className="flex flex-col md:flex-row gap-6 md:gap-10 items-center md:items-stretch">
             {/* Left Content Column: Description, Experience, Tools (now first for desktop) */}
             <div className="flex flex-col space-y-6 md:w-1/2 h-full items-center md:items-start justify-center">
               {/* Description */}
@@ -50,7 +50,7 @@ const AboutSection = () => {
             </div>
           </div>
           {/* Bottom Section: Numbered Skill Sections - horizontal flow on medium screens */}
-          <div className="flex flex-col md:flex-row justify-between gap-8 pt-6"> {/* Increased gap from gap-6 to gap-8 */}
+          <div className="flex flex-col md:flex-row justify-between gap-6 pt-6">
             {/* Photography */}
             <div className="md:w-1/3 text-center md:text-left">
               <p className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-600 mb-3">01</p>
