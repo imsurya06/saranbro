@@ -18,7 +18,7 @@ const photographyImages = [
   "/SHAL4208.JPG",
   "/0C8A3100.JPG",
   "/148A9514.JPG",
-  "/urban-solitude-1.png",
+  // Removed "/urban-solitude-1.png"
   // Add more photography image paths here
 ];
 
