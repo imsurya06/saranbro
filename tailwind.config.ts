@@ -97,12 +97,23 @@ export default {
           '0%': { transform: 'translateX(calc(-1 * var(--image-set-width)))' },
           '100%': { transform: 'translateX(0)' },
         },
+        "button-pulse": { // New keyframe for button pulse
+          "0%, 100%": {
+            transform: "scale(1)",
+            boxShadow: "0 0 0px rgba(255, 255, 255, 0.0)", // Start with no shadow
+          },
+          "50%": {
+            transform: "scale(1.01)",
+            boxShadow: "0 0 8px rgba(255, 255, 255, 0.2)", // Subtle glow
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         ticker: "ticker 30s linear infinite",
         "ticker-reverse": "ticker-reverse 30s linear infinite", // New reverse animation
+        "button-pulse": "button-pulse 2s ease-in-out infinite", // New animation for button pulse
       },
     },
   },

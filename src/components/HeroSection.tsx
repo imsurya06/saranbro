@@ -27,7 +27,7 @@ const HeroSection = () => {
             <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans font-semibold text-center md:text-left">
               I can do: <span className="font-bold">Cinematography, Photography, Post Production.</span>
             </p>
-            <Button className="mt-2 px-6 py-4 sm:px-8 sm:py-6 text-base sm:text-lg md:text-xl bg-white/10 text-white border border-white/20 hover:bg-white/20 rounded-full transition-colors duration-300">
+            <Button className="mt-2 px-6 py-4 sm:px-8 sm:py-6 text-base sm:text-lg md:text-xl bg-white/10 text-white border border-white/20 hover:bg-white/20 rounded-full transition-colors duration-300 animate-button-pulse">
               Get in Touch
             </Button>
           </div>
