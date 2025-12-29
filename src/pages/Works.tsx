@@ -97,7 +97,7 @@ const Works = () => {
               <DropdownMenu>
                 <DropdownMenuTrigger
                   className={cn(
-                    "flex items-center justify-center space-x-2 w-full h-full focus-visible:outline-none",
+                    "flex items-center justify-center space-x-2 w-full h-full focus-visible:outline-none rounded-full", // Added rounded-full here
                     activeTab === "videography"
                       ? "bg-white/10 text-white shadow-sm backdrop-blur-sm border border-white/20"
                       : "text-white/70 hover:text-white"
