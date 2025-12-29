@@ -22,6 +22,7 @@ const photographyImages = [
   "/SHAL4208.JPG",
   "/0C8A3100.JPG",
   "/148A9514.JPG",
+  "/DSC00890.JPG", // Added the new image here
   // Add more photography image paths here
 ];
 
@@ -32,7 +33,6 @@ const videographyVideos = [
   { src: "https://drive.google.com/file/d/10TuBPro-0givS0BsN9StoxYpiaU8r_D_/preview", title: "Google Drive Video" },
   { src: "https://drive.google.com/file/d/1Hx_pW1sotGI5zBTfSBEWaMaHSCL0pLx4/preview", title: "Another Google Drive Video" },
   { src: "https://drive.google.com/file/d/1IMPrl3htZwgTtD_AFc8LhfLLgjsP9qFB/preview", title: "Last Google Drive Video" },
-  // Removed the 7th video from here
   { src: "https://drive.google.com/file/d/1JtP4ShVqfNibeeluhQHM4Xj3KGr2vl20/preview", title: "New Google Drive Video" },
   { src: "https://drive.google.com/file/d/1DznzpDRkhNNFTlVqYpwPyYL3geiflrGi/preview", title: "Latest Google Drive Video" },
   { src: "https://drive.google.com/file/d/1ssQxSYnjt_r6SXnpQSO7TZB9-n3sV8Q8/preview", title: "Another New Google Drive Video" },
