@@ -23,7 +23,7 @@ const Index = () => {
       <HeroSection />
       <ImageTicker />
       <ImageTickerReverse />
-      {/* Removed the ViewAllButton for image tickers */}
+      <ViewAllButton href="/works?tab=photography" /> {/* Re-added and linked to photography tab */}
       <AboutSection />
       <VideographySection videos={videographyVideos} />
       <ViewAllButton href="/works?tab=videography" /> {/* Updated this View All button to link to the videography tab on the Works page */}
