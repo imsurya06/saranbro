@@ -17,7 +17,7 @@ const HeroSection = () => {
         {/* Content Container - Stacked vertically on mobile */}
         <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center w-full">
           {/* Left Content - Centered on mobile */}
-          <div className="flex flex-col items-center md:items-start text-center md:text-left space-y-6 md:w-1/2">
+          <div className="flex flex-col items-start text-left space-y-6 md:w-1/2">
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tight w-full text-left">
               Sharan,
             </h1>
