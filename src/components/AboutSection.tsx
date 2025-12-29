@@ -15,15 +15,9 @@ const AboutSection = () => {
         {/* Main content container - vertical flow */}
         <div className="flex flex-col gap-16 lg:gap-24">
           {/* Top Section: Image (top on mobile), Description, Experience, Tools (bottom on mobile) - horizontal flow on large screens */}
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center lg:items-stretch"> {/* Changed lg:items-start to lg:items-stretch to make children fill height */}
-            {/* Right Image Column (now first for mobile) */}
-            <div className="flex justify-center lg:justify-end lg:w-1/2">
-              <div className="w-full max-w-md lg:max-w-none rounded-lg overflow-hidden shadow-xl border border-gray-700 h-full"> {/* Added h-full to make image wrapper fill height */}
-                <img src="/055A8314 (1).jpg" alt="Sharan working with camera" className="w-full h-full object-cover" /> {/* Changed h-auto to h-full to make image fill its container */}
-              </div>
-            </div>
-            {/* Left Content Column: Description, Experience, Tools (now second for mobile) */}
-            <div className="flex flex-col space-y-8 lg:w-1/2 h-full items-center lg:items-start justify-between"> {/* Added justify-between to distribute content vertically */}
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-center lg:items-stretch">
+            {/* Left Content Column: Description, Experience, Tools (now first for desktop) */}
+            <div className="flex flex-col lg:w-1/2 h-full items-center lg:items-start justify-between"> {/* Removed space-y-8 */}
               {/* Description */}
               <div className="text-left w-full">
                 <h3 className="text-2xl font-bold mb-2">Description</h3>
@@ -46,6 +40,12 @@ const AboutSection = () => {
                 <p className="text-base lg:text-lg text-gray-300">
                   Adobe Premiere Pro, Davinci Resolve, After Effects
                 </p>
+              </div>
+            </div>
+            {/* Right Image Column (now second for desktop) */}
+            <div className="flex justify-center lg:justify-end lg:w-1/2">
+              <div className="w-full max-w-md lg:max-w-none rounded-lg overflow-hidden shadow-xl border border-gray-700 h-full">
+                <img src="/055A8314 (1).jpg" alt="Sharan working with camera" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
