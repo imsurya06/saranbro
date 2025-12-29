@@ -11,7 +11,7 @@ const SocialSidebar = () => {
       className={cn(
         "fixed right-0 top-1/2 -translate-y-1/2 z-50",
         "hidden md:flex flex-col items-center space-y-6",
-        "bg-white/10 backdrop-blur-lg rounded-l-full p-4 border border-white/20",
+        "bg-white/10 backdrop-blur-lg rounded-l-full px-4 py-6 border border-white/20", // Changed p-4 to px-4 py-6
         "transition-all duration-300"
       )}
     >
