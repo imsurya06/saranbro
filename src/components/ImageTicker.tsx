@@ -43,15 +43,14 @@ const ImageTicker = () => {
       {images.map((src, index) => (
         <div
           key={index}
-          className="w-[70vw] h-[40vh] md:w-[400px] md:h-[250px] lg:w-[500px] lg:h-[300px]"
+          className="w-[70vw] md:w-[400px] lg:w-[500px]"
         >
           <Dialog>
             <DialogTrigger asChild>
               <img
                 src={src}
                 alt={`Ticker Image ${index + 1}`}
-                className="w-full h-full object-cover rounded-lg shadow-lg md:rounded-lg md:shadow-lg cursor-pointer"
-                onClick={() => setSelectedImage(src)}
+                className="w-full h-auto object-cover rounded-lg shadow-lg md:rounded-lg md:shadow-lg cursor-pointer"
               />
             </DialogTrigger>
             <DialogContent className="max-w-4xl max-h-[90vh] p-0 border-0 bg-transparent shadow-none">
@@ -69,7 +68,6 @@ const ImageTicker = () => {
 
   return (
     <section className="w-full overflow-hidden py-0 bg-gray-950">
-      {/* Changed py-8 to py-0 */}
       <div
         className="flex animate-ticker"
         style={
