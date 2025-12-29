@@ -12,6 +12,7 @@ import { MadeWithDyad } from "@/components/made-with-dyad";
 const Index = () => {
   const videographyVideos = [
     { vimeoId: "1149860125", title: "First Videography Project" }, 
+    { vimeoId: "1149860178", title: "Second Videography Project" },
   ];
 
   return (
