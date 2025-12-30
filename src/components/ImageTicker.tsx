@@ -37,13 +37,13 @@ const ImageTicker = () => {
   const ImageSet = ({ setRef }: { setRef?: React.RefObject<HTMLDivElement> }) => (
     <div ref={setRef} className="flex gap-x-2 flex-shrink-0 items-stretch">
       {images.map((src, index) => (
-        <div key={index} className="w-[70vw] md:w-[400px] lg:w-[500px] h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] flex-shrink-0">
+        <div key={index} className="h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] flex-shrink-0 flex items-center justify-center"> {/* Removed fixed width, added flex centering */}
           <Dialog>
             <DialogTrigger asChild>
               <img
                 src={src}
                 alt={`Ticker Image ${index + 1}`}
-                className="w-full h-full object-cover rounded-lg shadow-lg md:rounded-lg md:shadow-lg cursor-pointer"
+                className="h-full w-auto object-contain rounded-lg shadow-lg md:rounded-lg md:shadow-lg cursor-pointer" // Changed w-full to w-auto and object-cover to object-contain
               />
             </DialogTrigger>
             <DialogContent className="max-w-4xl max-h-[90vh] p-0 border-0 bg-transparent shadow-none">
