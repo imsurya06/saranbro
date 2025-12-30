@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"; // Keep Button import if it's u
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative w-full bg-black text-white flex items-center justify-center overflow-hidden pt-32 pb-16 md:py-16 lg:py-0 md:pb-24 lg:pb-32"> {/* Increased pt-20 to pt-32 */}
+    <section id="home" className="relative w-full bg-black text-white flex items-center justify-center overflow-hidden pt-20 pb-16 md:py-16 lg:py-0 md:pb-24 lg:pb-32"> {/* Added md:pb-24 lg:pb-32 */}
       {/* Background Robotic Arm Image - hidden on mobile */}
       <img 
         src="/robot-arm-camera.png" 
