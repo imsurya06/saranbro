@@ -40,7 +40,7 @@ const HeroSection = () => {
             <img
               src="/camera dark.png"
               alt="Camera Illustration"
-              className="w-48 h-auto lg:w-64" 
+              className="w-64 h-auto lg:w-80 opacity-60" 
             />
           </div>
 
