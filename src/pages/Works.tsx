@@ -185,7 +185,11 @@ const Works = () => {
                       <img
                         src={src}
                         alt={`Photography ${index + 1}`}
-                        className="w-full h-auto object-cover rounded-lg shadow-lg cursor-pointer transform transition-transform duration-300 hover:scale-105"
+                        className="w-full h-auto object-cover shadow-lg md:shadow-lg cursor-pointer transform transition-transform duration-300 hover:scale-105" // Removed rounded-lg and md:rounded-lg
+                        loading="lazy" // Added lazy loading
+                        decoding="async" // Added async decoding
+                        width="600" // Placeholder width
+                        height="400" // Placeholder height
                       />
                     </DialogTrigger>
                     <DialogContent className="max-w-4xl max-h-[90vh] p-0 border-0 bg-transparent shadow-none">
@@ -193,6 +197,8 @@ const Works = () => {
                         src={src}
                         alt="Preview"
                         className="w-full h-full object-contain max-h-[80vh]"
+                        loading="lazy" // Added lazy loading
+                        decoding="async" // Added async decoding
                       />
                     </DialogContent>
                   </Dialog>
