@@ -127,6 +127,10 @@ export default {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0' },
         },
+        float: { // New keyframe for floating effect
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -139,6 +143,7 @@ export default {
         slideInFromBottom: "slideInFromBottom 0.8s ease-out forwards",
         slideInFromRight: "slideInFromRight 0.8s ease-out forwards",
         blink: "blink 1s step-end infinite", // Typing cursor blink
+        float: "float 3s ease-in-out infinite", // Apply the new float animation
       },
     },
   },
