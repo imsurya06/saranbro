@@ -1,13 +1,12 @@
 "use client";
 
 import React from "react";
-import useScrollAnimation from "@/hooks/use-scroll-animation"; // Import the new hook
+
 
 const AboutSection = () => {
-  const { ref, classes } = useScrollAnimation({ animationClass: 'animate-fadeIn', initialClass: 'opacity-0' }); // Use the hook
 
   return (
-    <section id="about" ref={ref} className={`w-full bg-black text-white pt-10 pb-16 md:pb-20 lg:pb-24 flex flex-col justify-center ${classes}`}>
+    <section id="about" className={`w-full bg-black text-white pt-10 pb-16 md:pb-20 lg:pb-24 flex flex-col justify-center`}>
       <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[200px] xl:px-[200px]">
         {/* Title */}
         <div className="flex justify-center md:justify-end mb-8 md:mb-10">

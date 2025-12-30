@@ -12,7 +12,7 @@ import VideographySection from "@/components/VideographySection";
 import ReelsGrid from "@/components/ReelsGrid"; // Import the new ReelsGrid component
 import { cn } from "@/lib/utils"; // Import cn for conditional classNames
 import { Button } from "@/components/ui/button"; // Import Button component
-import useScrollAnimation from "@/hooks/use-scroll-animation"; // Import the new hook
+
 
 const photographyImages = [
   "/SHA08619.jpg",
@@ -87,9 +87,6 @@ const Works = () => {
       : "videos"
   );
 
-  // Apply scroll animation to the main content
-  const { ref, classes } = useScrollAnimation<HTMLDivElement>({ animationClass: 'animate-fadeIn', initialClass: 'opacity-0' });
-
   useEffect(() => {
     const tab = queryParams.get("tab");
     const subtab = queryParams.get("subtab");
@@ -109,7 +106,7 @@ const Works = () => {
   return (
     <div className="min-h-screen bg-black text-white">
       <Header />
-      <main ref={ref} className={`pt-24 pb-16 px-4 sm:px-6 md:px-8 lg:px-[200px] xl:px-[200px] ${classes}`}>
+      <main className={`pt-24 pb-16 px-4 sm:px-6 md:px-8 lg:px-[200px] xl:px-[200px]`}>
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold text-center liquid-glass-text mb-20 py-4">
           My Works
         </h1>

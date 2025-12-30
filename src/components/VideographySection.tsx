@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import useScrollAnimation from "@/hooks/use-scroll-animation"; // Import the new hook
+
 
 interface VideoProps {
   vimeoId?: string; // Made optional
@@ -16,7 +16,6 @@ interface VideographySectionProps {
 }
 
 const VideographySection = ({ videos, showTitle = true, autoplayAndMute = false }: VideographySectionProps) => {
-  const { ref, classes } = useScrollAnimation({ animationClass: 'animate-fadeIn', initialClass: 'opacity-0' }); // Use the hook
 
   const getIframeSrc = (video: VideoProps) => {
     let baseUrl = "";
@@ -41,7 +40,7 @@ const VideographySection = ({ videos, showTitle = true, autoplayAndMute = false 
   };
 
   return (
-    <section id="videography" ref={ref} className={`w-full bg-black text-white py-16 md:py-20 lg:py-24 flex flex-col items-center ${classes}`}>
+    <section id="videography" className={`w-full bg-black text-white py-16 md:py-20 lg:py-24 flex flex-col items-center`}>
       {showTitle && ( // Conditionally render the title
         <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[200px] xl:px-[200px] mb-12">
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold text-center liquid-glass-text pb-2">

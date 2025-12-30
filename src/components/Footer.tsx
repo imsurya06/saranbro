@@ -3,13 +3,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin, Mail, ChevronRight } from "lucide-react";
-import useScrollAnimation from "@/hooks/use-scroll-animation"; // Import the new hook
+
 
 const Footer = () => {
-  const { ref, classes } = useScrollAnimation({ animationClass: 'animate-fadeIn', initialClass: 'opacity-0' }); // Use the hook
 
   return (
-    <footer id="contact" ref={ref} className={`w-full bg-black text-white pt-20 pb-8 md:pt-24 lg:pt-32 px-4 sm:px-6 md:px-8 lg:px-[200px] xl:px-[200px] ${classes}`}>
+    <footer id="contact" className={`w-full bg-black text-white pt-20 pb-8 md:pt-24 lg:pt-32 px-4 sm:px-6 md:px-8 lg:px-[200px] xl:px-[200px]`}>
       {/* Contact Title */}
       <div className="flex flex-col items-center mb-8 md:mb-12">
         <a href="mailto:blackashsharan@gmail.com" className="block text-white no-underline">

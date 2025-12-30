@@ -3,7 +3,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { X } from "lucide-react";
-import useScrollAnimation from "@/hooks/use-scroll-animation"; // Import the new hook
+
 
 const images = [
   "/0M1A7814.jpg",
@@ -15,7 +15,6 @@ const images = [
 const ImageTicker = () => {
   const imageSetRef = useRef<HTMLDivElement>(null);
   const [imageSetWidth, setImageSetWidth] = useState(0);
-  const { ref, classes } = useScrollAnimation({ animationClass: 'animate-fadeIn', initialClass: 'opacity-0' }); // Use the hook
 
   useEffect(() => {
     const calculateWidth = () => {
@@ -65,7 +64,7 @@ const ImageTicker = () => {
   );
 
   return (
-    <section ref={ref} className={`w-full overflow-hidden py-0 bg-gray-950 ${classes}`}>
+    <section className={`w-full overflow-hidden py-0 bg-gray-950`}>
       <div
         className="flex animate-ticker"
         style={
