@@ -5,10 +5,10 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { X } from "lucide-react";
 
 const images = [
-  "/DSC00975.JPG",
-  "/2W5A1246.JPG",
-  "/DSC08204.JPG",
-  "/0C8A1432.JPG",
+  "/0M1A7814.jpg",
+  "/1N5A4639.jpg",
+  "/0C8A3294.jpg",
+  "/_JPM8546.jpg",
 ];
 
 const ImageTicker = () => {
