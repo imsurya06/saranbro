@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import TypingEffect from "./TypingEffect"; // Import the new TypingEffect component
+// import TypingEffect from "./TypingEffect"; // Temporarily removed for troubleshooting
 
 const HeroSection = () => {
   return (
@@ -21,7 +21,7 @@ const HeroSection = () => {
           {/* Left Content - First column on desktop */}
           <div className="flex flex-col items-start text-left space-y-6 md:col-span-1">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold tracking-tight w-full text-left">
-              <TypingEffect text="Sharan," speed={150} />
+              Sharan, {/* Directly hardcoded for troubleshooting */}
             </h1>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans w-full text-left max-w-xs">
               Viscom student with a passion for cinematography and visual storytelling.
