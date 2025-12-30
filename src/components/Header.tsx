@@ -75,7 +75,7 @@ const Header = () => {
         className={cn(
           "fixed inset-0 z-40 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out md:hidden",
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full",
-          "bg-gray-900" // Replaced liquid-glass-bg with a solid background
+          "liquid-glass-bg" // Replaced bg-gray-900 with liquid-glass-bg
         )}
       >
         <Button
