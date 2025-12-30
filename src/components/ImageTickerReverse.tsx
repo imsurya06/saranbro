@@ -3,6 +3,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { X } from "lucide-react";
+import useScrollAnimation from "@/hooks/use-scroll-animation"; // Import the new hook
 
 const images = [
   "/DSC08201.jpg",
@@ -14,6 +15,7 @@ const images = [
 const ImageTickerReverse = () => {
   const imageSetRef = useRef<HTMLDivElement>(null);
   const [imageSetWidth, setImageSetWidth] = useState(0);
+  const { ref, classes } = useScrollAnimation({ animationClass: 'animate-fadeIn', initialClass: 'opacity-0' }); // Use the hook
 
   useEffect(() => {
     const calculateWidth = () => {
@@ -58,7 +60,7 @@ const ImageTickerReverse = () => {
   );
 
   return (
-    <section className="w-full overflow-hidden py-0 bg-gray-950">
+    <section ref={ref} className={`w-full overflow-hidden py-0 bg-gray-950 ${classes}`}>
       <div
         className="flex animate-ticker-reverse"
         // Using the new reverse animation
