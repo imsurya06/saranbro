@@ -5,10 +5,10 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { X } from "lucide-react";
 
 const images = [
-  "/1N5A5797.jpg", // Landscape
-  "/DSC00872.jpg", // Landscape
-  "/0C8A3331.jpg", // Landscape
-  "/SHA02338.jpg", // Landscape
+  "/DSC08201.jpg",
+  "/0C8A1432.jpg",
+  "/0C8A3317.jpg",
+  "/0C8A3448.jpg",
 ];
 
 const ImageTickerReverse = () => {
