@@ -40,7 +40,7 @@ const Header = () => {
         className={cn(
           "relative flex items-center justify-between transition-all duration-300",
           "md:w-auto md:max-w-fit rounded-full px-4 py-2 md:px-6 md:py-2",
-          scrolled ? "bg-white/10 backdrop-blur-lg" : "bg-transparent backdrop-blur-none"
+          scrolled ? "bg-white/20" : "bg-transparent" // Changed backdrop-blur-lg to bg-white/20
         )}
       >
         {scrolled && <NoiseOverlay />}
@@ -75,7 +75,7 @@ const Header = () => {
         className={cn(
           "fixed inset-0 z-40 flex flex-col items-center justify-center transition-transform duration-300 ease-in-out md:hidden",
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full",
-          "liquid-glass-bg" // Applied the new liquid glass background class
+          "bg-gray-900" // Replaced liquid-glass-bg with a solid background
         )}
       >
         <Button
