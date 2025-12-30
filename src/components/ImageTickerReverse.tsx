@@ -32,7 +32,7 @@ const ImageTickerReverse = () => {
   const ImageSet = ({ setRef }: { setRef?: React.RefObject<HTMLDivElement> }) => (
     <div ref={setRef} className="flex gap-x-2 flex-shrink-0 items-stretch">
       {images.map((src, index) => (
-        <div key={index} className="w-[70vw] md:w-[400px] lg:w-[500px] h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] flex-shrink-0">
+        <div key={index} className="w-[70vw] md:w-[400px] lg:w-[500px] h-[180px] sm:h-[220px] md:h-[250px] lg:h-[280px] flex-shrink-0"> {/* Adjusted height */}
           <Dialog>
             <DialogTrigger asChild>
               <img
