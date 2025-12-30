@@ -24,7 +24,7 @@ const HeroSection = () => {
             <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans w-full text-left max-w-xs">
               Viscom student with a passion for cinematography and visual storytelling.
             </p>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans font-semibold w-full text-left max-w-xs">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans font-normal w-full text-left max-w-xs"> {/* Changed font-semibold to font-normal */}
               I can do: <span className="font-bold inline-block">Photography, Videography and Post production.</span>
             </p>
             {/* Changed Button to an <a> tag with mailto link */}
