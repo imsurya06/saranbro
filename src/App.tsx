@@ -18,7 +18,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop /> {/* Add ScrollToTop here */}
-        <div className="animate-fadeIn"> {/* Apply general fade-in to the entire app content */}
+        <div> {/* Removed animate-fadeIn from here */}
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/works" element={<Works />} /> {/* Add the new Works route */}
