@@ -10,7 +10,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import VideographySection from "@/components/VideographySection";
 import ReelsGrid from "@/components/ReelsGrid"; // Import the new ReelsGrid component
-import { MadeWithDyad } from "@/components/made-with-dyad";
 import { cn } from "@/lib/utils"; // Import cn for conditional classNames
 import { Button } from "@/components/ui/button"; // Import Button component
 
@@ -226,7 +225,6 @@ const Works = () => {
         </Tabs>
       </main>
       <Footer />
-      <MadeWithDyad />
     </div>
   );
 };

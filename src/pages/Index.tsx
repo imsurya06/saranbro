@@ -8,7 +8,7 @@ import ViewAllButton from "@/components/ViewAllButton";
 import AboutSection from "@/components/AboutSection";
 import VideographySection from "@/components/VideographySection";
 import Footer from "@/components/Footer"; // Import the new Footer component
-import { MadeWithDyad } from "@/components/made-with-dyad";
+
 
 const Index = () => {
   const videographyVideos = [
@@ -28,7 +28,6 @@ const Index = () => {
       <VideographySection videos={videographyVideos} autoplayAndMute={true} /> {/* Added autoplayAndMute prop */}
       <ViewAllButton href="/works?tab=videography" /> {/* Updated this View All button to link to the videography tab on the Works page */}
       <Footer /> {/* Add the Footer component here */}
-      <MadeWithDyad />
     </div>
   );
 };
