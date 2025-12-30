@@ -18,12 +18,14 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <ScrollToTop /> {/* Add ScrollToTop here */}
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/works" element={<Works />} /> {/* Add the new Works route */}
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <div className="animate-fadeIn"> {/* Apply general fade-in to the entire app content */}
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/works" element={<Works />} /> {/* Add the new Works route */}
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
       </BrowserRouter>
       <SocialSidebar /> {/* Add the SocialSidebar here */}
     </TooltipProvider>

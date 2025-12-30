@@ -107,6 +107,26 @@ export default {
             boxShadow: "0 0 8px rgba(255, 255, 255, 0.2)", // Subtle glow
           },
         },
+        fadeIn: { // New keyframe for general fade-in
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideInFromLeft: { // New keyframe for sliding from left
+          '0%': { transform: 'translateX(-100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        slideInFromBottom: { // New keyframe for sliding from bottom
+          '0%': { transform: 'translateY(100%)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        slideInFromRight: { // New keyframe for sliding from right
+          '0%': { transform: 'translateX(100%)', opacity: '0' },
+          '100%': { transform: 'translateX(0)', opacity: '1' },
+        },
+        blink: { // New keyframe for typing cursor blink
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0' },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -114,6 +134,11 @@ export default {
         ticker: "ticker 30s linear infinite",
         "ticker-reverse": "ticker-reverse 30s linear infinite", // New reverse animation
         "button-pulse": "button-pulse 2s ease-in-out infinite", // New animation for button pulse
+        fadeIn: "fadeIn 1s ease-out forwards", // General fade-in
+        slideInFromLeft: "slideInFromLeft 0.8s ease-out forwards",
+        slideInFromBottom: "slideInFromBottom 0.8s ease-out forwards",
+        slideInFromRight: "slideInFromRight 0.8s ease-out forwards",
+        blink: "blink 1s step-end infinite", // Typing cursor blink
       },
     },
   },
