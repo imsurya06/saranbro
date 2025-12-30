@@ -14,10 +14,10 @@ const HeroSection = () => {
       />
       
       <div className="relative z-10 w-full px-4 sm:px-8 md:px-12 lg:px-[200px] grid grid-cols-1 gap-8 items-center">
-        {/* Content Container - Stacked vertically on mobile */}
-        <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center w-full">
-          {/* Left Content - Centered on mobile */}
-          <div className="flex flex-col items-start text-left space-y-6 md:w-1/2">
+        {/* Content Container - Stacked vertically on mobile, 3 columns on md and up */}
+        <div className="flex flex-col md:grid md:grid-cols-3 gap-8 md:gap-12 items-center w-full">
+          {/* Left Content - First column on desktop */}
+          <div className="flex flex-col items-start text-left space-y-6 md:col-span-1">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold tracking-tight w-full text-left opacity-0 animate-fadeIn [animation-delay:0.2s]">
               <TypingEffect text="Sharan," speed={150} />
             </h1>
@@ -35,14 +35,23 @@ const HeroSection = () => {
             </a>
           </div>
           
-          {/* Right Content - Centered on mobile */}
-          <div className="flex flex-col items-center md:items-end text-center md:text-right space-y-6 md:w-1/2">
+          {/* New Center Image - Second column on desktop, hidden on mobile */}
+          <div className="hidden md:flex justify-center items-center md:col-span-1 opacity-0 animate-fadeIn [animation-delay:2.4s]">
+            <img
+              src="/camera dark.png"
+              alt="Camera Illustration"
+              className="w-48 h-auto lg:w-64" 
+            />
+          </div>
+
+          {/* Right Content - Third column on desktop */}
+          <div className="flex flex-col items-center md:items-end text-center md:text-right space-y-6 md:col-span-1">
             <img 
               src="/urban-solitude-1.png" 
               alt="Sharan's Portfolio" 
-              className="w-56 sm:w-64 md:w-72 h-auto rounded-lg shadow-lg opacity-0 animate-slideInFromRight [animation-delay:2.4s]" 
+              className="w-56 sm:w-64 md:w-72 h-auto rounded-lg shadow-lg opacity-0 animate-slideInFromRight [animation-delay:2.7s]" 
             />
-            <p className="text-sm sm:text-base md:text-lg font-sans w-56 sm:w-64 md:w-72 text-right opacity-0 animate-slideInFromRight [animation-delay:2.7s]">
+            <p className="text-sm sm:text-base md:text-lg font-sans w-56 sm:w-64 md:w-72 text-right opacity-0 animate-slideInFromRight [animation-delay:3.0s]">
               Creating cinematic imagery with clarity, emotion, and intention.
             </p>
           </div>
