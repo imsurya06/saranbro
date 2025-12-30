@@ -38,7 +38,7 @@ const ImageTickerReverse = () => {
               <img
                 src={src}
                 alt={`Ticker Image ${index + 1}`}
-                className="w-full h-full object-cover rounded-lg shadow-lg md:rounded-lg md:shadow-lg cursor-pointer"
+                className="w-full h-full object-contain rounded-lg shadow-lg md:rounded-lg md:shadow-lg cursor-pointer"
               />
             </DialogTrigger>
             <DialogContent className="max-w-4xl max-h-[90vh] p-0 border-0 bg-transparent shadow-none">
