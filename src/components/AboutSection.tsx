@@ -47,7 +47,13 @@ const AboutSection = () => {
             {/* Right Image Column (now second for desktop) */}
             <div className="flex justify-center md:justify-end md:w-1/2">
               <div className="w-full max-w-sm sm:max-w-md md:max-w-lg rounded-lg overflow-hidden shadow-xl border border-gray-700 h-full">
-                <img src="/055A8314 (1)-2.jpg" alt="Sharan working with camera" className="w-full h-full object-cover" />
+                <img 
+                  src="/055A8314 (1)-2.jpg" 
+                  alt="Sharan working with camera" 
+                  className="w-full h-full object-cover" 
+                  loading="lazy" // Optimized: Lazy load
+                  decoding="async" // Optimized: Asynchronous decoding
+                />
               </div>
             </div>
           </div>
