@@ -18,7 +18,7 @@ const HeroSection = () => {
         <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center w-full">
           {/* Left Content - Centered on mobile */}
           <div className="flex flex-col items-start text-left space-y-6 md:w-1/2">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading font-bold tracking-tight w-full text-left">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold tracking-tight w-full text-left">
               Sharan,
             </h1>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans w-full text-left max-w-xs">
