@@ -13,7 +13,7 @@ const HeroSection = () => {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] md:w-[1000px] lg:w-[1200px] opacity-30 z-0 pointer-events-none hidden md:block" 
       />
       
-      <div className="relative z-10 w-full px-4 sm:px-8 md:px-12 lg:px-[200px] grid grid-cols-1 gap-8 items-center">
+      <div className="relative z-10 w-full px-2 sm:px-8 md:px-12 lg:px-[200px] grid grid-cols-1 gap-8 items-center">
         {/* Content Container - Stacked vertically on mobile, 3 columns on md and up */}
         <div className="flex flex-col md:grid md:grid-cols-3 gap-8 md:gap-12 items-center w-full">
           {/* Left Content - First column on desktop */}
