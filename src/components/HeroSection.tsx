@@ -18,25 +18,25 @@ const HeroSection = () => {
         <div className="flex flex-col md:grid md:grid-cols-3 gap-8 md:gap-12 items-center w-full">
           {/* Left Content - First column on desktop */}
           <div className="flex flex-col items-start text-left space-y-6 md:col-span-1">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold tracking-tight w-full text-left opacity-0 animate-fadeIn [animation-delay:0.2s]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold tracking-tight w-full text-left">
               <TypingEffect text="Sharan," speed={150} />
             </h1>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans w-full text-left max-w-xs opacity-0 animate-slideInFromLeft [animation-delay:1.5s]">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans w-full text-left max-w-xs">
               Viscom student with a passion for cinematography and visual storytelling.
             </p>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans font-normal w-full text-left max-w-xs opacity-0 animate-slideInFromLeft [animation-delay:1.8s]">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-sans font-normal w-full text-left max-w-xs">
               I can do: <span className="font-medium inline-block">Photography, Videography and Post production.</span>
             </p>
             <a 
               href="mailto:blackashsharan@gmail.com" 
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base sm:text-lg md:text-xl font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 mt-2 px-6 py-4 sm:px-8 sm:py-6 bg-white/10 text-white border border-white/20 hover:bg-white/20 duration-300 animate-button-pulse opacity-0 animate-slideInFromBottom [animation-delay:2.1s]"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-base sm:text-lg md:text-xl font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 mt-2 px-6 py-4 sm:px-8 sm:py-6 bg-white/10 text-white border border-white/20 hover:bg-white/20 duration-300 animate-button-pulse"
             >
               Get in Touch
             </a>
           </div>
           
           {/* New Center Image - Second column on desktop, hidden on mobile */}
-          <div className="hidden md:flex justify-center items-center md:col-span-1 opacity-0 animate-fadeIn [animation-delay:2.4s]">
+          <div className="hidden md:flex justify-center items-center md:col-span-1">
             <img
               src="/camera dark.png"
               alt="Camera Illustration"
@@ -49,9 +49,9 @@ const HeroSection = () => {
             <img 
               src="/urban-solitude-1.png" 
               alt="Sharan's Portfolio" 
-              className="w-56 sm:w-64 md:w-72 h-auto rounded-lg shadow-lg opacity-0 animate-slideInFromRight [animation-delay:2.7s]" 
+              className="w-56 sm:w-64 md:w-72 h-auto rounded-lg shadow-lg" 
             />
-            <p className="text-sm sm:text-base md:text-lg font-sans w-56 sm:w-64 md:w-72 text-right opacity-0 animate-slideInFromRight [animation-delay:3.0s]">
+            <p className="text-sm sm:text-base md:text-lg font-sans w-56 sm:w-64 md:w-72 text-right">
               Creating cinematic imagery with clarity, emotion, and intention.
             </p>
           </div>
