@@ -177,7 +177,7 @@ const Works = () => {
           </TabsList>
 
           <TabsContent value="photography">
-            <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4"> {/* Changed grid to columns */}
+            <div className="columns-2 md:columns-3 lg:columns-4 gap-4"> {/* Changed columns-1 sm:columns-2 to columns-2 */}
               {photographyImages.map((src, index) => (
                 <div key={index} className="break-inside-avoid-column mb-4"> {/* New wrapper div */}
                   <Dialog>
