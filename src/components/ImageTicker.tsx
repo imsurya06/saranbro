@@ -45,6 +45,8 @@ const ImageTicker = () => {
                 src={src}
                 alt={`Ticker Image ${index + 1}`}
                 className="w-full h-full object-cover shadow-lg md:shadow-lg cursor-pointer" // Removed rounded-lg and md:rounded-lg
+                loading="lazy" // Added lazy loading
+                decoding="async" // Added async decoding
               />
             </DialogTrigger>
             <DialogContent className="max-w-4xl max-h-[90vh] p-0 border-0 bg-transparent shadow-none">
@@ -53,6 +55,8 @@ const ImageTicker = () => {
                   src={src}
                   alt="Preview"
                   className="w-full h-full object-contain max-h-[80vh]"
+                  loading="lazy" // Added lazy loading
+                  decoding="async" // Added async decoding
                 />
                 {/* Removed the custom close button */}
               </div>
@@ -70,6 +74,7 @@ const ImageTicker = () => {
         style={
           {
             "--image-set-width": `${imageSetWidth}px`,
+            willChange: 'transform', // Added will-change for performance
           } as React.CSSProperties
         }
       >
