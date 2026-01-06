@@ -53,6 +53,8 @@ const AboutSection = () => {
                   className="w-full h-full object-cover" 
                   loading="lazy" // Optimized: Lazy load
                   decoding="async" // Optimized: Asynchronous decoding
+                  width="600" // Specified width for layout shift prevention
+                  height="800" // Specified height for layout shift prevention (assuming portrait)
                 />
               </div>
             </div>

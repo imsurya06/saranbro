@@ -2,7 +2,6 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { X } from "lucide-react";
 
 
 const images = [
@@ -39,9 +38,11 @@ const ImageTickerReverse = () => {
               <img
                 src={src}
                 alt={`Ticker Image ${index + 1}`}
-                className="w-full h-full object-cover shadow-lg md:shadow-lg cursor-pointer" // Removed rounded-lg and md:rounded-lg
+                className="w-full h-full object-cover shadow-lg md:shadow-lg cursor-pointer"
                 loading="lazy" // Added lazy loading
                 decoding="async" // Added async decoding
+                width="600" // Specified width for layout shift prevention
+                height="400" // Specified height for layout shift prevention
               />
             </DialogTrigger>
             <DialogContent className="max-w-4xl max-h-[90vh] p-0 border-0 bg-transparent shadow-none">
@@ -52,8 +53,9 @@ const ImageTickerReverse = () => {
                   className="w-full h-full object-contain max-h-[80vh]"
                   loading="lazy" // Added lazy loading
                   decoding="async" // Added async decoding
+                  width="600" // Specified width for layout shift prevention
+                  height="400" // Specified height for layout shift prevention
                 />
-                {/* Removed the custom close button */}
               </div>
             </DialogContent>
           </Dialog>

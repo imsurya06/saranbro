@@ -185,7 +185,7 @@ const Works = () => {
                       <img
                         src={src}
                         alt={`Photography ${index + 1}`}
-                        className="w-full h-auto object-cover shadow-lg md:shadow-lg cursor-pointer transform transition-transform duration-300 hover:scale-105" // Removed rounded-lg and md:rounded-lg
+                        className="w-full h-auto object-cover shadow-lg md:shadow-lg cursor-pointer transform transition-transform duration-300 hover:scale-105"
                         loading="lazy" // Added lazy loading
                         decoding="async" // Added async decoding
                         width="600" // Placeholder width
@@ -199,6 +199,8 @@ const Works = () => {
                         className="w-full h-full object-contain max-h-[80vh]"
                         loading="lazy" // Added lazy loading
                         decoding="async" // Added async decoding
+                        width="600" // Placeholder width
+                        height="400" // Placeholder height
                       />
                     </DialogContent>
                   </Dialog>

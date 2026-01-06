@@ -13,6 +13,8 @@ const HeroSection = () => {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] md:w-[1000px] lg:w-[1200px] opacity-30 z-0 pointer-events-none hidden md:block" 
         loading="lazy" // Optimized: Lazy load
         decoding="async" // Optimized: Asynchronous decoding
+        width="1200" // Specified width for layout shift prevention
+        height="800" // Specified height for layout shift prevention (assuming 3:2 aspect ratio)
       />
       
       <div className="relative z-10 w-full px-0 sm:px-8 md:px-12 lg:px-[200px] grid grid-cols-1 gap-8 items-center">
@@ -45,6 +47,8 @@ const HeroSection = () => {
               className="w-80 h-auto lg:w-96 opacity-60 animate-float" 
               loading="lazy" // Optimized: Lazy load
               decoding="async" // Optimized: Asynchronous decoding
+              width="384" // Specified width for layout shift prevention (96 * 4)
+              height="384" // Specified height for layout shift prevention (assuming square)
               style={{ willChange: 'transform' }} // Optimized: Hint for animation performance
             />
           </div>
@@ -57,6 +61,8 @@ const HeroSection = () => {
               className="w-56 sm:w-64 md:w-72 h-auto rounded-lg shadow-lg" 
               loading="lazy" // Optimized: Lazy load
               decoding="async" // Optimized: Asynchronous decoding
+              width="288" // Specified width for layout shift prevention (72 * 4)
+              height="432" // Specified height for layout shift prevention (assuming 2:3 portrait)
             />
             <p className="text-sm sm:text-base md:text-lg font-sans w-56 sm:w-64 md:w-72 text-right">
               Creating cinematic imagery with clarity, emotion, and intention.
