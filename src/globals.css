@@ -121,6 +121,6 @@
   background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(173,216,230,0.1) 25%, rgba(255,255,255,0.1) 50%, rgba(173,216,230,0.1) 75%, rgba(255,255,255,0.1) 100%);
   background-size: 200% auto;
   animation: liquid-gradient 5s ease infinite alternate;
-  backdrop-filter: blur(20px); /* Re-enabled for glass effect */
-  -webkit-backdrop-filter: blur(20px); /* Re-enabled for glass effect */
+  /* backdrop-filter: blur(20px); */ /* Removed for performance */
+  /* -webkit-backdrop-filter: blur(20px); */ /* Removed for performance */
 }
