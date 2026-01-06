@@ -12,8 +12,8 @@ import Footer from "@/components/Footer"; // Import the new Footer component
 
 const Index = () => {
   const videographyVideos = [
-    { vimeoId: "1149860125", title: "First Videography Project" }, 
-    { vimeoId: "1149860178", title: "Second Videography Project" },
+    { vimeoId: "1150929014", title: "Second Videography Project" }, // Updated and moved to first
+    { vimeoId: "1149860125", title: "First Videography Project" },
     { vimeoId: "1149860280", title: "Third Videography Project" }, // Added the new video
   ];
 
