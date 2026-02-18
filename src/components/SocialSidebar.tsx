@@ -35,13 +35,7 @@ const SocialSidebar = () => {
         >
           <Linkedin size={24} />
         </a>
-        <a
-          href="mailto:blackashsharan@gmail.com"
-          className="text-gray-300 hover:text-white transition-colors"
-          aria-label="Email"
-        >
-          <Mail size={24} />
-        </a>
+
         <a
           href="https://wa.me/919597050372"
           target="_blank"

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Instagram, Linkedin, Mail, ChevronRight } from "lucide-react"; // Added social icons and ChevronRight
+import { Menu, X, Instagram, Linkedin, Mail, ChevronRight, MessageCircle } from "lucide-react"; // Added social icons and ChevronRight
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import NoiseOverlay from './NoiseOverlay';
@@ -135,8 +135,8 @@ const Header = () => {
             <a href="https://www.linkedin.com/in/sharan-s-55943b24a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
               <Linkedin size={32} />
             </a>
-            <a href="mailto:blackashsharan@gmail.com" className="text-gray-400 hover:text-white transition-colors"> {/* Updated mailto link */}
-              <Mail size={32} />
+            <a href="https://wa.me/919597050372" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              <MessageCircle size={32} />
             </a>
           </div>
         </div>

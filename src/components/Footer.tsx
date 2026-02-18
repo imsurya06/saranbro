@@ -50,9 +50,7 @@ const Footer = () => {
           <a href="https://www.linkedin.com/in/sharan-s-55943b24a?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors border border-gray-700 rounded-full p-2">
             <Linkedin size={20} />
           </a>
-          <a href="mailto:blackashsharan@gmail.com" className="text-gray-400 hover:text-white transition-colors border border-gray-700 rounded-full p-2"> {/* Updated mailto link */}
-            <Mail size={20} />
-          </a>
+
           <a href="https://wa.me/919597050372" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors border border-gray-700 rounded-full p-2">
             <MessageCircle size={20} />
           </a>
