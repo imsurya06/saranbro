@@ -105,8 +105,9 @@ const Works = () => {
   );
 
   useEffect(() => {
-    const tab = queryParams.get("tab");
-    const subtab = queryParams.get("subtab");
+    const params = new URLSearchParams(location.search);
+    const tab = params.get("tab");
+    const subtab = params.get("subtab");
 
     if (tab === "videography") {
       setActiveTab("videography");
