@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Instagram, Linkedin, Mail } from "lucide-react";
+import { Instagram, Linkedin, Mail, MessageCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import NoiseOverlay from "./NoiseOverlay";
 
@@ -41,6 +41,15 @@ const SocialSidebar = () => {
           aria-label="Email"
         >
           <Mail size={24} />
+        </a>
+        <a
+          href="https://wa.me/919597050372"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-gray-300 hover:text-white transition-colors"
+          aria-label="WhatsApp"
+        >
+          <MessageCircle size={24} />
         </a>
       </div>
     </div>

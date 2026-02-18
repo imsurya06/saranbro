@@ -30,8 +30,8 @@ const Header = () => {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Works", href: "/works" }, // Updated href to /works
-    { name: "Contact", href: "mailto:blackashsharan@gmail.com", icon: <ChevronRight size={24} /> }, // Updated Contact link to mailto
+    { name: "Works", href: "/works" },
+    { name: "Contact", href: "https://wa.me/919597050372", icon: <ChevronRight size={24} />, external: true },
   ];
 
   return (
@@ -40,21 +40,34 @@ const Header = () => {
         className={cn(
           "relative flex items-center justify-between transition-all duration-300",
           "md:w-auto md:max-w-fit rounded-full px-4 py-2 md:px-6 md:py-2",
-          scrolled ? "bg-white/20" : "bg-transparent" // Changed backdrop-blur-lg to bg-white/20
+          scrolled ? "bg-white/20" : "bg-transparent"
         )}
       >
         {scrolled && <NoiseOverlay />}
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8 relative z-10">
           {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.href}
-              className="text-white text-lg hover:text-gray-300 transition-colors duration-300 flex items-center" // Added flex items-center
-            >
-              {link.name}
-              {link.icon && <span className="ml-1">{link.icon}</span>} {/* Render icon if present */}
-            </Link>
+            link.external ? (
+              <a
+                key={link.name}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white text-lg hover:text-gray-300 transition-colors duration-300 flex items-center"
+              >
+                {link.name}
+                {link.icon && <span className="ml-1">{link.icon}</span>}
+              </a>
+            ) : (
+              <Link
+                key={link.name}
+                to={link.href}
+                className="text-white text-lg hover:text-gray-300 transition-colors duration-300 flex items-center"
+              >
+                {link.name}
+                {link.icon && <span className="ml-1">{link.icon}</span>}
+              </Link>
+            )
           ))}
         </div>
 
@@ -88,15 +101,29 @@ const Header = () => {
         </Button>
         <div className="flex flex-col space-y-8 items-center">
           {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.href}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-white text-3xl font-medium hover:text-gray-300 transition-colors duration-300 flex items-center"
-            >
-              {link.name}
-              {link.icon && <span className="ml-2">{link.icon}</span>}
-            </Link>
+            link.external ? (
+              <a
+                key={link.name}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-white text-3xl font-medium hover:text-gray-300 transition-colors duration-300 flex items-center"
+              >
+                {link.name}
+                {link.icon && <span className="ml-2">{link.icon}</span>}
+              </a>
+            ) : (
+              <Link
+                key={link.name}
+                to={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="text-white text-3xl font-medium hover:text-gray-300 transition-colors duration-300 flex items-center"
+              >
+                {link.name}
+                {link.icon && <span className="ml-2">{link.icon}</span>}
+              </Link>
+            )
           ))}
           {/* "Get in touch" text */}
           <p className="text-gray-300 text-lg mt-12 mb-4">get in touch</p>

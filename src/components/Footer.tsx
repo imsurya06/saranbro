@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import { Instagram, Linkedin, Mail, ChevronRight } from "lucide-react";
+import { Instagram, Linkedin, Mail, ChevronRight, MessageCircle } from "lucide-react";
 
 
 const Footer = () => {
@@ -32,7 +32,7 @@ const Footer = () => {
           <Link to="/works" className="text-gray-300 hover:text-white transition-colors text-base md:text-lg"> {/* Updated href to /works */}
             Works
           </Link>
-          <a href="mailto:blackashsharan@gmail.com" className="text-gray-300 hover:text-white transition-colors text-base md:text-lg flex items-center"> {/* Changed to <a> tag and updated mailto link */}
+          <a href="https://wa.me/919597050372" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors text-base md:text-lg flex items-center">
             Contact <ChevronRight className="ml-1 h-4 w-4" />
           </a>
         </div>
@@ -52,6 +52,9 @@ const Footer = () => {
           </a>
           <a href="mailto:blackashsharan@gmail.com" className="text-gray-400 hover:text-white transition-colors border border-gray-700 rounded-full p-2"> {/* Updated mailto link */}
             <Mail size={20} />
+          </a>
+          <a href="https://wa.me/919597050372" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors border border-gray-700 rounded-full p-2">
+            <MessageCircle size={20} />
           </a>
         </div>
       </div>
